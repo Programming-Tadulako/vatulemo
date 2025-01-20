@@ -7,11 +7,11 @@ import { Button } from "@/components/ui/button";
 export default function MainNav() {
   return (
     <header aria-label="navbar" className="sticky top-0 z-50 w-full">
-      <div className="bg-pt-primary-darker">
+      <div className="bg-pt-primary">
         <div className="container mx-auto p-5">
           <div className="flex items-center justify-between gap-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="size-8 bg-[url('/assets/icons/ic_pt-dark.svg')] bg-cover bg-center bg-no-repeat" />
+              <div className="size-8 bg-[url('/assets/icons/ic_pt-white.svg')] bg-cover bg-center bg-no-repeat" />
             </Link>
 
             <nav className="hidden items-center gap-7 lg:flex">
@@ -22,7 +22,7 @@ export default function MainNav() {
               ))}
               <div className="flex items-center gap-2">
                 <ThemeToggle />
-                <Button asChild>
+                <Button size="sm" asChild>
                   <Link href="/">Join Us</Link>
                 </Button>
               </div>

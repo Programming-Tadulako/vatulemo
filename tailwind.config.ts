@@ -10,7 +10,6 @@ export default {
         "pt-primary": {
           DEFAULT: "hsl(var(--pt-primary))",
           foreground: "hsl(var(--pt-primary))",
-          darker: "hsl(var(--pt-primary-darker))",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

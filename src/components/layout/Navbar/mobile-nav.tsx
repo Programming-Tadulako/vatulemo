@@ -14,14 +14,14 @@ export default function MobileNav() {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className="rounded-sm border p-2">
-        <Menu className="size-4" />
+      <SheetTrigger className="rounded-sm bg-foreground p-2">
+        <Menu className="size-4 text-pt-primary" />
       </SheetTrigger>
-      <SheetContent side="top" className="w-screen">
+      <SheetContent side="top" className="bg-pt-primary">
         <SheetHeader>
-          <SheetTitle className="ml-2 flex justify-center">
+          <SheetTitle className="flex justify-center">
             <Link href="/" onClick={() => setIsOpen(false)}>
-              <div className="size-8 bg-[url('/assets/icons/ic_pt-dark.svg')] bg-cover bg-center bg-no-repeat" />
+              <div className="size-8 bg-[url('/assets/icons/ic_pt-white.svg')] bg-cover bg-center bg-no-repeat" />
             </Link>
           </SheetTitle>
           <SheetDescription asChild>
@@ -31,10 +31,12 @@ export default function MobileNav() {
                   {title}
                 </Link>
               ))}
-              <ThemeToggle />
-              <Button asChild>
-                <Link href="/">Join Us</Link>
-              </Button>
+              <div className="flex items-center gap-2">
+                <ThemeToggle />
+                <Button size="sm" asChild>
+                  <Link href="/">Join Us</Link>
+                </Button>
+              </div>
             </nav>
           </SheetDescription>
         </SheetHeader>

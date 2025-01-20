@@ -1,10 +1,10 @@
-interface NavLinkProps {
+interface NavItemType {
   id: string;
   href: string;
   title: string;
 }
 
-export const LINKS: NavLinkProps[] = [
+export const LINKS: NavItemType[] = [
   {
     id: "1",
     href: "/",
