@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="mx-32 my-14 space-y-8">
-      <h1 className="text-4xl font-bold">
+    <section className="mx-8 my-8 space-y-8 md:mx-16 lg:mx-32 lg:my-14">
+      <h1 className="text-3xl font-bold lg:text-4xl">
         About <span className="underline">Programming Tadulako</span>
       </h1>
       <div className="flex flex-col gap-5 lg:flex-row">
