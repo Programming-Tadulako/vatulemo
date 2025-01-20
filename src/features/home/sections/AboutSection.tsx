@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import { aboutGalleryImages } from "../constant";
 
 export default function AboutSection() {
   return (
@@ -33,32 +33,21 @@ export default function AboutSection() {
             alt="Logo Programming Tadulako"
             height={299}
             width={442}
-            className="h-auto w-full object-contain"
+            className="h-auto w-full rounded-md object-contain"
           />
         </div>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-3">
-        <Image
-          src="/assets/images/about/1.png"
-          alt="dokumentasi"
-          height={300}
-          width={400}
-          className="h-auto w-full rounded-md object-cover"
-        />
-        <Image
-          src="/assets/images/about/2.png"
-          alt="dokumentasi"
-          height={300}
-          width={400}
-          className="h-auto w-full rounded-md object-cover"
-        />
-        <Image
-          src="/assets/images/about/3.png"
-          alt="dokumentasi"
-          height={300}
-          width={400}
-          className="h-auto w-full rounded-md object-cover"
-        />
+        {aboutGalleryImages.map((image) => (
+          <Image
+            key={image.id}
+            src={image.src}
+            alt={image.alt}
+            height={image.height}
+            width={image.width}
+            className="h-auto w-full rounded-md object-cover"
+          />
+        ))}
       </div>
     </section>
   );
