@@ -1,15 +1,17 @@
 import type { Config } from "tailwindcss";
+import tailwindCSSAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
+        "pt-primary": {
+          DEFAULT: "hsl(var(--pt-primary))",
+          foreground: "hsl(var(--pt-primary))",
+          darker: "hsl(var(--pt-primary-darker))",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -58,5 +60,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindCSSAnimate],
 } satisfies Config;
