@@ -1,4 +1,6 @@
+import { CircleArrowDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 
 export default function HeroSection() {
@@ -14,9 +16,16 @@ export default function HeroSection() {
         </p>
         <span className="text-2xl font-bold">#GrowTogetherWithUs</span>
         <div className="flex items-center gap-4">
-          <FaInstagram size={40} />
-          <FaDiscord size={40} />
+          <Link target="_blank" href="https://www.instagram.com/programming.tadulako">
+            <FaInstagram size={40} />
+          </Link>
+          <Link target="_blank" href="https://discord.gg/gyBWNxAb">
+            <FaDiscord size={40} />
+          </Link>
         </div>
+        <Link href="/#about" className="mt-20">
+          <CircleArrowDown className="opacity-60 transition-opacity hover:opacity-100" />
+        </Link>
       </div>
     </section>
   );
