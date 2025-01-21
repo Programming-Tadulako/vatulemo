@@ -4,7 +4,7 @@ import { GALLERY_IMAGES } from "../constants";
 export default function AboutSection() {
   return (
     <section className="m-8 space-y-8 md:mx-16 lg:mx-32 lg:my-14">
-      <h1 className="text-3xl font-bold lg:text-4xl">
+      <h1 className="text-3xl font-bold text-pt-primary lg:text-4xl">
         About <span className="underline">Programming Tadulako</span>
       </h1>
       <div className="flex flex-col gap-5 lg:flex-row">
