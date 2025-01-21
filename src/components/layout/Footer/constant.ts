@@ -34,14 +34,6 @@ export const FOOTER_DATA: FooterType = {
         name: "Event",
         url: "/#event",
       },
-      {
-        name: "Batch",
-        url: "/#batch",
-      },
-      {
-        name: "FAQ",
-        url: "/#faq",
-      },
     ],
   },
   contact: {
