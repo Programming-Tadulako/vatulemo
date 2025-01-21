@@ -1,13 +1,11 @@
 "use client";
+
+import Link from "next/link";
 import { useState } from "react";
 import { Menu } from "lucide-react";
-import Link from "next/link";
-
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { ThemeToggle } from "@/components/common/ThemeToggle";
-
-import { NAV_LINKS } from "../../layout/Navbar/constant";
 import { Button } from "@/components/ui/button";
+import { NAV_LINKS } from "../../layout/Navbar/constant";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +29,9 @@ export default function MobileNav() {
                   {title}
                 </Link>
               ))}
-              <div className="flex items-center gap-2">
-                <ThemeToggle />
-                <Button size="sm" asChild>
-                  <Link href="/">Join Us</Link>
-                </Button>
-              </div>
+              <Button size="sm" variant="secondary" asChild>
+                <Link href="/">Join Us</Link>
+              </Button>
             </nav>
           </SheetDescription>
         </SheetHeader>
