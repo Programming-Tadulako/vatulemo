@@ -12,10 +12,10 @@ export default function MobileNav() {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className="rounded-sm bg-foreground p-2">
-        <Menu className="size-4 text-pt-primary" />
+      <SheetTrigger className="rounded-lg border border-white p-2">
+        <Menu className="size-5" />
       </SheetTrigger>
-      <SheetContent side="top" className="bg-pt-primary">
+      <SheetContent side="top" className="bg-pt-primary text-white">
         <SheetHeader>
           <SheetTitle className="flex justify-center">
             <Link href="/" onClick={() => setIsOpen(false)}>
@@ -23,9 +23,9 @@ export default function MobileNav() {
             </Link>
           </SheetTitle>
           <SheetDescription asChild>
-            <nav className="mt-2 flex flex-col items-center gap-4">
+            <nav className="flex flex-col items-center gap-4 pt-2">
               {NAV_LINKS.map(({ href, id, title }) => (
-                <Link key={id} href={href} className="text-sm font-medium">
+                <Link key={id} href={href} className="py-1 text-sm font-medium text-white opacity-90 hover:underline">
                   {title}
                 </Link>
               ))}
