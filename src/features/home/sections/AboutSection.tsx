@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { aboutGalleryImages } from "../constant";
+import { GALLERY_IMAGES } from "../constants";
 
 export default function AboutSection() {
   return (
-    <section className="mx-8 my-8 space-y-8 md:mx-16 lg:mx-32 lg:my-14">
+    <section className="m-8 space-y-8 md:mx-16 lg:mx-32 lg:my-14">
       <h1 className="text-3xl font-bold lg:text-4xl">
         About <span className="underline">Programming Tadulako</span>
       </h1>
@@ -38,13 +38,13 @@ export default function AboutSection() {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-3">
-        {aboutGalleryImages.map((image) => (
+        {GALLERY_IMAGES.map(({ id, src, dimensions: { height, width } }) => (
           <Image
-            key={image.id}
-            src={image.src}
-            alt={image.alt}
-            height={image.height}
-            width={image.width}
+            key={id}
+            src={src}
+            alt={`Gallery Image ${id}`}
+            height={height}
+            width={width}
             className="h-auto w-full rounded-md object-cover"
           />
         ))}

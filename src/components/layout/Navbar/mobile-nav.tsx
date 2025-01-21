@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 
-import { LINKS } from "../../layout/Navbar/constant";
+import { NAV_LINKS } from "../../layout/Navbar/constant";
 import { Button } from "@/components/ui/button";
 
 export default function MobileNav() {
@@ -26,7 +26,7 @@ export default function MobileNav() {
           </SheetTitle>
           <SheetDescription asChild>
             <nav className="mt-2 flex flex-col items-center gap-4">
-              {LINKS.map(({ href, id, title }) => (
+              {NAV_LINKS.map(({ href, id, title }) => (
                 <Link key={id} href={href} className="text-sm font-medium">
                   {title}
                 </Link>

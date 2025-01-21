@@ -1,10 +1,10 @@
-interface NavItemType {
+interface NavLink {
   id: string;
   href: string;
   title: string;
 }
 
-export const LINKS: NavItemType[] = [
+export const NAV_LINKS: NavLink[] = [
   {
     id: "1",
     href: "/",

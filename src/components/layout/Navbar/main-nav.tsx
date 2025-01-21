@@ -1,7 +1,7 @@
 import { ThemeToggle } from "@/components/common/ThemeToggle";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
-import { LINKS } from "./constant";
+import { NAV_LINKS } from "./constant";
 import { Button } from "@/components/ui/button";
 
 export default function MainNav() {
@@ -15,7 +15,7 @@ export default function MainNav() {
             </Link>
 
             <nav className="hidden items-center gap-7 lg:flex">
-              {LINKS.map(({ href, id, title }) => (
+              {NAV_LINKS.map(({ href, id, title }) => (
                 <Link key={id} href={href} className="text-sm font-medium text-foreground">
                   {title}
                 </Link>
