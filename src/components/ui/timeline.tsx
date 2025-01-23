@@ -1,0 +1,131 @@
+"use client";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+
+interface TimelineEntry {
+  year: string;
+  title: string;
+  content: {
+    description: string;
+    list?: string[];
+    image: string;
+  };
+}
+
+export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+  const [offset, setOffset] = useState<[string, string]>(["start 10%", "end 50%"]);
+
+  useEffect(() => {
+    const container = ref.current;
+    if (!container) return;
+
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setHeight(entry.contentRect.height);
+      }
+    });
+
+    observer.observe(container);
+
+    return () => observer.unobserve(container);
+  }, [ref]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setOffset(["start 10%", "end 90%"]);
+      } else {
+        setOffset(["start 10%", "end 50%"]);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: offset,
+  });
+
+  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
+  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+
+  return (
+    <div className="w-full bg-white dark:bg-neutral-950 md:px-10" ref={containerRef}>
+      <div className="mx-auto max-w-7xl px-8 pt-20">
+        <h2 className="text-3xl font-bold text-pt-primary lg:text-4xl">Batch</h2>
+        <p className="max-w-sm text-sm text-neutral-700 dark:text-neutral-300 md:text-base">
+          Sampai saat ini Programming Tadulako telah memiliki beberapa batch yaitu:
+        </p>
+      </div>
+
+      <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
+        {data.map((item, index) => (
+          <div key={index} className="flex justify-start pt-12 md:gap-10 md:pt-40">
+            <div className="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start md:w-full md:flex-row lg:max-w-sm">
+              <div className="absolute left-3 flex h-10 w-10 items-center justify-center rounded-full bg-white dark:bg-black md:left-3">
+                <div className="h-4 w-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800" />
+              </div>
+              <div className="flex flex-col">
+                <h3 className="hidden text-xl font-bold text-pt-primary md:block md:pl-20 md:text-5xl">{item.year}</h3>
+                <h4 className="text-md hidden font-semibold text-pt-primary md:block md:pl-20 md:text-3xl">
+                  {item.title}
+                </h4>
+              </div>
+            </div>
+
+            <div className="relative w-full pl-20 pr-8 md:pl-4">
+              <div className="mb-1 flex flex-col -space-y-1">
+                <h3 className="block text-left text-2xl font-bold text-pt-primary md:hidden">{item.year}</h3>
+                <h4 className="block text-lg font-semibold text-pt-primary md:hidden md:pl-20 md:text-3xl">
+                  {item.title}
+                </h4>
+              </div>
+              <div className="flex flex-col justify-between gap-6 md:gap-10 lg:flex-row">
+                <div>
+                  <p className="mb-2 text-left text-sm font-normal text-neutral-800 dark:text-neutral-200 md:text-base">
+                    {item.content.description}
+                  </p>
+                  {item.content.list && (
+                    <ul className="list-inside list-disc text-left text-sm md:text-base">
+                      {item.content.list.map((listItem, i) => (
+                        <li key={i}>{listItem}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <Image
+                  src={item.content.image}
+                  alt="batch image"
+                  width={500}
+                  height={500}
+                  className="w-full rounded-lg object-cover shadow lg:w-1/2"
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+        <div
+          style={{
+            height: height + "px",
+          }}
+          className="absolute left-8 top-0 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] dark:via-neutral-700 md:left-8"
+        >
+          <motion.div
+            style={{
+              height: heightTransform,
+              opacity: opacityTransform,
+            }}
+            className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-blue-400 from-[0%] via-pt-primary via-[10%] to-transparent"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
