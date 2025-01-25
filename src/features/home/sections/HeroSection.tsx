@@ -9,7 +9,7 @@ export default function HeroSection() {
       id="hero"
       className="min-h-screen bg-[url('/assets/images/hero/bg_hero-waves.svg')] bg-cover bg-center bg-no-repeat p-5"
     >
-      <div className="mx-auto flex max-w-screen-md flex-col gap-4 pt-32 text-white lg:items-center">
+      <div className="mx-auto flex max-w-screen-md flex-col gap-4 pt-36 text-white lg:items-center">
         <Image src="/assets/icons/ic_pt_full-white.svg" alt="Programming Tadulako" width={500} height={150} />
         <p className="text-lg lg:text-center lg:text-2xl">
           A community based in Palu, Indonesia. <br /> Learn about programming, softskills, and teamwork.
