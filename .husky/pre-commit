@@ -1,2 +1,1 @@
-pnpm lint
-pnpm check-format
+pnpm lint && pnpx lint-staged
