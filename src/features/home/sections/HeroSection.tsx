@@ -23,7 +23,7 @@ export default function HeroSection() {
             <FaDiscord size={40} />
           </Link>
         </div>
-        <Link href="/#about" className="mt-20">
+        <Link href="/#about" className="mx-auto mt-20">
           <CircleArrowDown className="opacity-60 transition-opacity hover:opacity-100" />
         </Link>
       </div>
