@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
 import useScrolling from "@/hooks/useScrolling";
@@ -17,7 +18,7 @@ export default function MainNav() {
       <div className="container mx-auto p-5">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2">
-            <div className="size-8 bg-[url('/assets/icons/ic_pt-white.svg')] bg-cover bg-center bg-no-repeat" />
+            <Image src="/assets/icons/ic_pt-white.svg" alt="Programming Tadulako" width={40} height={40} />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">

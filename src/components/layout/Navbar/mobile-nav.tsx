@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu } from "lucide-react";
@@ -19,7 +20,7 @@ export default function MobileNav() {
         <SheetHeader>
           <SheetTitle className="flex justify-center">
             <Link href="/" onClick={() => setIsOpen(false)}>
-              <div className="size-8 bg-[url('/assets/icons/ic_pt-white.svg')] bg-cover bg-center bg-no-repeat" />
+              <Image src="/assets/icons/ic_pt-white.svg" alt="Programming Tadulako" width={40} height={40} />
             </Link>
           </SheetTitle>
           <SheetDescription asChild>
