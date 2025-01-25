@@ -1,3 +1,4 @@
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { CircleArrowDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -14,7 +15,10 @@ export default function HeroSection() {
         <p className="text-lg lg:text-center lg:text-2xl">
           A community based in Palu, Indonesia. <br /> Learn about programming, softskills, and teamwork.
         </p>
-        <span className="text-2xl font-bold">#GrowTogetherWithUs</span>
+        <TypewriterEffect
+          className="text-start text-2xl font-bold"
+          words={[{ text: "#GrowTogetherWithUs", className: "text-white" }]}
+        />
         <div className="flex items-center gap-4">
           <Link target="_blank" href="https://www.instagram.com/programming.tadulako">
             <FaInstagram size={40} />
