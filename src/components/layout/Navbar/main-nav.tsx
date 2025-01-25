@@ -1,11 +1,19 @@
+"use client";
+
 import Link from "next/link";
 import MobileNav from "./mobile-nav";
+import useScrolling from "@/hooks/useScrolling";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "./constant";
 
 export default function MainNav() {
+  const isScrolled = useScrolling();
+
   return (
-    <header aria-label="navbar" className="sticky top-0 z-50 w-full bg-pt-primary text-white">
+    <header
+      aria-label="navbar"
+      className={`fixed top-0 z-50 w-full text-white duration-300 ease-in-out ${isScrolled ? "bg-pt-primary shadow-sm" : "bg-transparent"}`}
+    >
       <div className="container mx-auto p-5">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2">
