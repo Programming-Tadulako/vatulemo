@@ -7,35 +7,29 @@ export default function AboutSection() {
       <h1 className="text-3xl font-bold text-pt-primary lg:text-4xl">
         About <span className="underline">Programming Tadulako</span>
       </h1>
-      <div className="flex flex-col gap-5 lg:flex-row">
-        <div className="flex-1 space-y-4 text-justify">
+      <div className="grid gap-5 lg:grid-cols-2">
+        <div className="space-y-4 text-justify">
           <p>
-            Programming Tadulako pertama kali diinisiasi pada tahun 2012 dengan nama awal Web Programming Tadulako,
-            sebuah komunitas yang berfokus pada pengembangan pengetahuan di bidang teknologi web atau web programming.
-            Komunitas ini didirikan dengan tujuan utama untuk memberikan wadah bagi mahasiswa dalam mempelajari dan
-            mengasah keterampilan terkait pengembangan web.
+            <strong>Programming Tadulako</strong> pertama kali diinisiasi pada tahun 2012 dengan nama awal{" "}
+            <strong>Web Programming Tadulako</strong>, sebuah komunitas yang berfokus pada pengembangan pengetahuan di
+            bidang teknologi web atau web programming. Komunitas ini didirikan dengan tujuan utama untuk memberikan
+            wadah bagi Mahasiswa Universitas Tadulako dalam mempelajari dan mengasah keterampilan terkait pengembangan
+            web.
           </p>
           <p>
-            Seiring berjalannya waktu dan pergantian kepengurusan, nama Web Programming Tadulako diubah menjadi
-            Programming Tadulako. Perubahan ini bertujuan untuk memperluas cakupan pembelajaran yang ditawarkan, tidak
-            hanya terbatas pada pengembangan web, tetapi juga mencakup berbagai aspek teknologi pemrograman lainnya.
-          </p>
-          <p>
-            Komunitas ini memiliki visi untuk menciptakan ekosistem teknologi yang lebih unggul dan relevan dengan
-            kebutuhan dunia kerja. Dengan pendekatan ini, Programming Tadulako berkomitmen untuk membekali mahasiswa
-            Universitas Tadulako dengan keterampilan yang dapat meningkatkan daya saing mereka di pasar kerja, sekaligus
-            mendukung perkembangan teknologi di tingkat lokal maupun nasional.
+            Seiring berjalannya waktu dan pergantian kepengurusan, nama komunitas diubah menjadi{" "}
+            <strong>Programming Tadulako</strong>. Perubahan ini bertujuan untuk memperluas cakupan pembelajaran yang
+            ditawarkan, tidak hanya terbatas pada pengembangan web, tetapi juga mencakup berbagai aspek teknologi
+            pemrograman lainnya.
           </p>
         </div>
-        <div className="flex flex-1 items-center justify-center">
-          <Image
-            src="/assets/images/about/pt.png"
-            alt="Logo Programming Tadulako"
-            height={299}
-            width={442}
-            className="h-auto w-full rounded-md object-contain"
-          />
-        </div>
+        <Image
+          src="/assets/images/about/pt.png"
+          alt="Logo Programming Tadulako"
+          width={688}
+          height={275}
+          className="size-full rounded-md object-contain"
+        />
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-3">
         {GALLERY_IMAGES.map(({ id, src, dimensions: { height, width } }) => (
