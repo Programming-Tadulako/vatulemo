@@ -17,7 +17,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
-  const [offset, setOffset] = useState<[string, string]>(["start 10%", "end 50%"]);
+  const [offset, setOffset] = useState<[`start ${number}%`, `end ${number}%`]>(["start 10%", "end 50%"]);
 
   useEffect(() => {
     const container = ref.current;
