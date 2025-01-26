@@ -26,7 +26,12 @@ export default function MobileNav() {
           <SheetDescription asChild>
             <nav className="flex flex-col items-center gap-4 pt-2">
               {NAV_LINKS.map(({ href, id, title }) => (
-                <Link key={id} href={href} className="py-1 text-sm font-medium text-white opacity-90 hover:underline">
+                <Link
+                  key={id}
+                  href={href}
+                  className="py-1 text-sm font-medium text-white opacity-90 hover:underline"
+                  onClick={() => setIsOpen(false)}
+                >
                   {title}
                 </Link>
               ))}
