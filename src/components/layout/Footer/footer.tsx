@@ -15,7 +15,7 @@ export default function Footer() {
     <footer>
       <Image src="/assets/images/footer/waves.svg" alt="Footer Waves" width={2000} height={1000} />
       <div className="bg-pt-primary py-12 text-white">
-        <div className="container grid items-center justify-center justify-items-center gap-8 lg:grid-cols-4 lg:flex-row lg:items-start">
+        <div className="container grid items-center justify-center justify-items-center gap-8 lg:grid-cols-4 lg:items-start">
           <Link href="/">
             <Image
               src="/assets/images/footer/footer_logo.svg"
