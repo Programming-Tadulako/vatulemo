@@ -12,10 +12,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="text-white">
+    <footer>
       <Image src="/assets/images/footer/waves.svg" alt="Footer Waves" width={2000} height={1000} />
-      <div className="flex items-center justify-center bg-pt-primary p-5 py-12">
-        <div className="grid w-full items-center justify-center justify-items-center gap-8 px-5 lg:grid-cols-4 lg:items-start">
+      <div className="bg-pt-primary py-12 text-white">
+        <div className="container grid items-center justify-center justify-items-center gap-8 lg:grid-cols-4 lg:flex-row lg:items-start">
           <Link href="/">
             <Image
               src="/assets/images/footer/footer_logo.svg"

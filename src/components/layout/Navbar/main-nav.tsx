@@ -15,7 +15,7 @@ export default function MainNav() {
       aria-label="navbar"
       className={`fixed top-0 z-50 w-full text-white duration-300 ease-in-out ${isScrolled ? "bg-pt-primary shadow-sm" : "bg-transparent"}`}
     >
-      <div className="container mx-auto p-5">
+      <div className="container py-5">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/assets/icons/ic_pt-white.svg" alt="Programming Tadulako" width={40} height={40} />
