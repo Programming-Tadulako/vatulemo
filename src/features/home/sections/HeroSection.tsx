@@ -1,7 +1,7 @@
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { CircleArrowDown } from "lucide-react";
+import { CircleChevronDown } from "lucide-react";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function HeroSection() {
             </Link>
           </div>
           <Link href="/#about" className="mx-auto mt-20">
-            <CircleArrowDown className="opacity-60 transition-opacity hover:opacity-100" />
+            <CircleChevronDown className="opacity-60 transition-opacity hover:scale-110 hover:opacity-100" />
           </Link>
         </div>
       </div>
