@@ -7,6 +7,16 @@ interface GalleryImage {
   };
 }
 
+interface BatchData {
+  year: string;
+  title: string;
+  content: {
+    description: string;
+    list?: string[];
+    image: string;
+  };
+}
+
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "1",
@@ -34,7 +44,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
   },
 ];
 
-export const BATCH_DATA = [
+export const BATCH_DATA: BatchData[] = [
   {
     year: "2019",
     title: "Fiery Hydrogen",
