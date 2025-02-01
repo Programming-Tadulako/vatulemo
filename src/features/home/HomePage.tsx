@@ -1,5 +1,6 @@
 import AboutSection from "./sections/AboutSection";
 import BatchSection from "./sections/BatchSection";
+import FeaturesSection from "./sections/FeaturesSection";
 import HeroSection from "./sections/HeroSection";
 
 export default function HomePage() {
@@ -7,6 +8,7 @@ export default function HomePage() {
     <div>
       <HeroSection />
       <AboutSection />
+      <FeaturesSection />
       <BatchSection />
     </div>
   );

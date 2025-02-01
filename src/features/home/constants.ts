@@ -17,6 +17,13 @@ interface BatchData {
   };
 }
 
+interface FeaturesData {
+  title: string;
+  header: string;
+  description?: string;
+  span?: boolean;
+}
+
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "1",
@@ -102,5 +109,31 @@ export const BATCH_DATA: BatchData[] = [
       description: "Coming Soon",
       image: "/assets/images/batch/batch-soyuz.png",
     },
+  },
+];
+
+export const FEATURES_DATA: FeaturesData[] = [
+  {
+    title: "Build Your Tech Foundation",
+    header: "/assets/images/features/features_header1.png",
+    description:
+      "Mulai dengan HTML/CSS/JS dasar, dan pilih path-mu: Frontend with React atau Backend with Golang. Lengkapi dengan Git/Github workflow!",
+    span: true,
+  },
+  {
+    title: "Master Modern Stacks",
+    header: "/assets/images/features/features_header2.png",
+  },
+  {
+    title: "Never Code Alone",
+    header: "/assets/images/features/features_header3.png",
+    description: "Ada banyak mentor berpengalaman yang siap membantumu.",
+  },
+  {
+    title: "Code Chill Repeat",
+    header: "/assets/images/features/features_header4.png",
+    description:
+      "Yuk liburan bareng kami! Jauhkan sejenak dari rutinitas, recharge energi, dan upgrade skill. Coding, chill, repeat!",
+    span: true,
   },
 ];
