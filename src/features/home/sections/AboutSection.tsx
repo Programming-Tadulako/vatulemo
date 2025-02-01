@@ -4,7 +4,7 @@ import { GALLERY_IMAGES } from "../constants";
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="container space-y-8">
+      <div className="container space-y-8 pt-10">
         <h1 className="text-3xl font-bold text-pt-primary lg:text-4xl">
           About <span className="underline">Programming Tadulako</span>
         </h1>
