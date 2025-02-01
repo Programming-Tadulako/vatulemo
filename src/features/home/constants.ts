@@ -24,6 +24,11 @@ interface FeaturesData {
   span?: boolean;
 }
 
+interface FaqData {
+  title: string;
+  description: string;
+}
+
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     id: "1",
@@ -135,5 +140,32 @@ export const FEATURES_DATA: FeaturesData[] = [
     description:
       "Yuk liburan bareng kami! Jauhkan sejenak dari rutinitas, recharge energi, dan upgrade skill. Coding, chill, repeat!",
     span: true,
+  },
+];
+
+export const FAQ_DATA: FaqData[] = [
+  {
+    title: "Apa itu Programming Tadulako?",
+    description:
+      "Programming Tadulako adalah komunitas yang berfokus pada pengembangan pengetahuan teknologi dan pemrograman, didirikan pada tahun 2012 untuk memberikan wadah bagi Mahasiswa Universitas Tadulako dalam mempelajari dan mengasah keterampilan programming.",
+  },
+  {
+    title: "Apa saja yang dipelajari di sini?",
+    description:
+      "Di Programming Tadulako, kamu akan mempelajari dasar-dasar web development (HTML, CSS, JS), Git & Github, serta bisa memilih jalur Frontend (ReactJS) atau Backend (Golang). Semua materi diajarkan oleh mentor yang berpengalaman.",
+  },
+  {
+    title: "Siapa saja yang bisa bergabung?",
+    description:
+      "Mahasiswa aktif Universitas Tadulako dari program studi Teknik Informatika dan Sistem Informasi. Yang memiliki kemauan untuk belajar programming.",
+  },
+  {
+    title: "Bagaimana cara bergabung?",
+    description: "Kamu bisa mengikuti informasi pendaftaran batch terbaru melalui website dan media sosial kami.",
+  },
+  {
+    title: "Apakah ada biaya untuk bergabung?",
+    description:
+      "Programming Tadulako adalah komunitas non-profit. Semua kegiatan pembelajaran dan mentoring diberikan secara gratis untuk mahasiswa Universitas Tadulako.",
   },
 ];
