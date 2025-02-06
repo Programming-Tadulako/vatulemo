@@ -5,7 +5,6 @@ import { CircleChevronDown } from "lucide-react";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import { ShinyButton } from "@/components/ui/shiny-button";
 
 export default function HeroSection() {
   return (
@@ -28,10 +27,11 @@ export default function HeroSection() {
               <FaDiscord size={40} />
             </Link>
           </div>
-          <Link href="/#about" className="mx-auto mt-20">
-            <ShinyButton className="group rounded-full p-0">
-              <CircleChevronDown className="opacity-80 transition-opacity group-hover:scale-110 group-hover:opacity-100" />
-            </ShinyButton>
+          <Link
+            href="/#about"
+            className="mx-auto mt-20 opacity-80 transition-opacity hover:scale-110 hover:opacity-100"
+          >
+            <CircleChevronDown size={20} className="text-white" />
           </Link>
         </div>
       </div>
