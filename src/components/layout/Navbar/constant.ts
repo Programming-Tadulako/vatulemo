@@ -17,7 +17,7 @@ export const NAV_LINKS: NavLink[] = [
   },
   {
     id: "3",
-    href: "/#event",
-    title: "Event",
+    href: "/#faq",
+    title: "FAQ",
   },
 ];

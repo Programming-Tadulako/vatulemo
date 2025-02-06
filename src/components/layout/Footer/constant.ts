@@ -31,8 +31,8 @@ export const FOOTER_DATA: FooterType = {
         url: "/#about",
       },
       {
-        name: "Event",
-        url: "/#event",
+        name: "FAQ",
+        url: "/#faq",
       },
     ],
   },
