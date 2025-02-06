@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section id="about">
       <div className="container space-y-8 pt-10">
-        <h1 className="text-3xl font-bold text-pt-primary lg:text-4xl">
+        <h1 className="text-pt-primary text-3xl font-bold lg:text-4xl">
           About <span className="underline">Programming Tadulako</span>
         </h1>
         <div className="grid gap-5 lg:grid-cols-2">

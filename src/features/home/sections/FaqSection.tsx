@@ -5,7 +5,7 @@ export default function BatchSection() {
   return (
     <section id="faq">
       <div className="container py-20">
-        <h1 className="pb-8 text-center text-4xl font-bold uppercase text-pt-primary">FAQ</h1>
+        <h1 className="text-pt-primary pb-8 text-center text-4xl font-bold uppercase">FAQ</h1>
         <Accordion type="single" collapsible>
           {FAQ_DATA.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index + 1}`}>

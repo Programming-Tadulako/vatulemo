@@ -58,7 +58,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="container bg-white" ref={containerRef}>
-      <h2 className="text-3xl font-bold text-pt-primary lg:text-4xl">Batch</h2>
+      <h2 className="text-pt-primary text-3xl font-bold lg:text-4xl">Batch</h2>
       <p className="max-w-sm text-sm text-neutral-700 md:text-base">
         Sampai saat ini Programming Tadulako telah memiliki beberapa batch yaitu:
       </p>
@@ -71,17 +71,17 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 <div className="h-4 w-4 rounded-full border border-neutral-300 bg-neutral-200 p-2" />
               </div>
               <div className="flex flex-col">
-                <h3 className="hidden text-xl font-bold text-pt-primary md:block md:pl-20 md:text-5xl">{item.year}</h3>
-                <h4 className="text-md hidden font-semibold text-pt-primary md:block md:pl-20 md:text-3xl">
+                <h3 className="text-pt-primary hidden text-xl font-bold md:block md:pl-20 md:text-5xl">{item.year}</h3>
+                <h4 className="text-md text-pt-primary hidden font-semibold md:block md:pl-20 md:text-3xl">
                   {item.title}
                 </h4>
               </div>
             </div>
 
-            <div className="relative w-full pl-20 pr-8 md:pl-4">
+            <div className="relative w-full pr-8 pl-20 md:pl-4">
               <div className="mb-1 flex flex-col -space-y-1">
-                <h3 className="block text-left text-2xl font-bold text-pt-primary md:hidden">{item.year}</h3>
-                <h4 className="block text-lg font-semibold text-pt-primary md:hidden md:pl-20 md:text-3xl">
+                <h3 className="text-pt-primary block text-left text-2xl font-bold md:hidden">{item.year}</h3>
+                <h4 className="text-pt-primary block text-lg font-semibold md:hidden md:pl-20 md:text-3xl">
                   {item.title}
                 </h4>
               </div>
@@ -103,7 +103,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   alt="batch image"
                   width={500}
                   height={500}
-                  className="w-full rounded-lg object-cover shadow lg:w-1/2"
+                  className="w-full rounded-lg object-cover shadow-sm lg:w-1/2"
                 />
               </div>
             </div>
@@ -113,14 +113,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           style={{
             height: height + "px",
           }}
-          className="absolute left-8 top-0 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8"
+          className="absolute top-0 left-8 w-[2px] overflow-hidden bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-0% via-neutral-200 to-transparent to-99% [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] md:left-8"
         >
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] rounded-full bg-gradient-to-t from-blue-400 from-[0%] via-pt-primary via-[10%] to-transparent"
+            className="via-pt-primary absolute inset-x-0 top-0 w-[2px] rounded-full bg-linear-to-t from-blue-400 from-0% via-10% to-transparent"
           />
         </div>
       </div>
