@@ -14,7 +14,7 @@ export default function MobileNav() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="rounded-lg border border-white p-2">
-        <Menu className="size-5" />
+        <Menu className="size-4" />
       </SheetTrigger>
       <SheetContent side="top" className="bg-pt-primary text-white">
         <SheetHeader>
