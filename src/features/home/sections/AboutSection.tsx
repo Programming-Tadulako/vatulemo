@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNavigation } from "@/c
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="container py-20 lg:py-40">
+      <div className="container pt-10 pb-20 lg:py-40">
         <Carousel>
           <div className="flex flex-col-reverse gap-10 lg:flex-row lg:gap-16">
             <div className="basis-1/2">
