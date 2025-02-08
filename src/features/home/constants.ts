@@ -17,6 +17,7 @@ interface TeamMember {
   name: string;
   role: string;
   company: string;
+  isActive: boolean;
 }
 
 interface FeaturesData {
@@ -112,73 +113,101 @@ export const BATCH_DATA: BatchData[] = [
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
-  { name: "Tri Krama", role: "Fullstack Engineer", company: "BPBD Sulteng" },
+  {
+    name: "Tri Krama",
+    role: "Fullstack Engineer",
+    company: "BPBD Sulteng",
+    isActive: true,
+  },
   {
     name: "Khairun Nisa Cipta Hapsari",
     role: "Backend Engineer",
     company: "KJA Furqan",
+    isActive: true,
   },
   {
     name: "Anugerah Aidin Yotolembah",
     role: "Data Scientist",
     company: "Mknows Consulting",
+    isActive: true,
   },
   {
     name: "Syeikhan Ritzmy",
     role: "Fullstack Engineer",
-    company: "Ex Intern Cakap",
+    company: "Intern Cakap",
+    isActive: false,
   },
   {
     name: "Andi Suhriani",
     role: "Frontend Engineer",
-    company: "Ex Independent Study at RuangGuru",
+    company: "Independent Study at RuangGuru",
+    isActive: false,
   },
   {
     name: "Khairul Insan Karim",
     role: "Backend Engineer",
-    company: "Ex Independent Study at Alterra",
+    company: "Independent Study at Alterra",
+    isActive: false,
   },
   {
     name: "Faldiansyah",
     role: "Frontend Engineer",
-    company: "Ex Intern at Educourse.id",
+    company: "Intern at Educourse.id",
+    isActive: false,
   },
   {
     name: "Muhamad Putra Satria",
     role: "Frontend Engineer",
     company: "Tan Digital",
+    isActive: true,
   },
-  { name: "Akwan Maroso", role: "Mid Backend Developer", company: "" },
+  {
+    name: "Akwan Maroso",
+    role: "Mid Backend Developer",
+    company: "",
+    isActive: true,
+  },
   {
     name: "Dharma Kirti",
     role: "Frontend Engineer",
     company: "Studi Independen Alterra",
+    isActive: true,
   },
   {
     name: "Vicky Herdiansyah Adri",
     role: "Frontend Engineer",
     company: "Pegadaian",
+    isActive: true,
   },
-  { name: "Ryan Adi Putra", role: "Software Engineer", company: "Garena" },
+  {
+    name: "Ryan Adi Putra",
+    role: "Software Engineer",
+    company: "Garena",
+    isActive: true,
+  },
   {
     name: "Muhammad Jindan",
     role: "Cloud Computing",
     company: "Studi Independen Bangkit 2022",
+    isActive: false,
   },
   {
     name: "Naufal Daffa Uhaq",
     role: "Android Developer",
     company: "Studi Independen Bangkit 2022",
+    isActive: false,
   },
   {
     name: "Nur Salsabila",
     role: "Video, Motion & Multimedia",
     company: "Studi Independen Zenius",
+    isActive: false,
   },
   {
     name: "Chrissavelin",
     role: "DevOps Engineer",
     company: "UPT TIK Untad",
+    isActive: true,
   },
 ];
 

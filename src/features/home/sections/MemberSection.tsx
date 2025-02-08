@@ -9,7 +9,19 @@ export default function MemberSection() {
   const firstRow = TEAM_MEMBERS.slice(0, TEAM_MEMBERS.length / 2);
   const secondRow = TEAM_MEMBERS.slice(TEAM_MEMBERS.length / 2);
 
-  const TeamCard = ({ name, role, company }: { name: string; role: string; company: string }) => {
+  const TeamCard = ({
+    name,
+    role,
+    company,
+    isActive,
+  }: {
+    name: string;
+    role: string;
+    company: string;
+    isActive: boolean;
+  }) => {
+    const currPosition = isActive ? `${role} at ${company}` : `Ex ${role} at ${company}`;
+
     return (
       <figure
         className={cn(
@@ -24,14 +36,10 @@ export default function MemberSection() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger>
-                  <p className="line-clamp-1 text-start text-xs font-medium">
-                    {role} at {company}
-                  </p>
+                  <p className="line-clamp-1 text-start text-xs font-medium">{currPosition}</p>
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p>
-                    {role} at {company}
-                  </p>
+                  <p>{currPosition}</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
