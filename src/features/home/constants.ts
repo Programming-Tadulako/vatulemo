@@ -13,6 +13,12 @@ interface BatchData {
   };
 }
 
+interface TeamMember {
+  name: string;
+  role: string;
+  company: string;
+}
+
 interface FeaturesData {
   title: string;
   header: string;
@@ -102,6 +108,77 @@ export const BATCH_DATA: BatchData[] = [
       description: "Coming Soon",
       image: "/assets/images/batch/batch-soyuz.png",
     },
+  },
+];
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  { name: "Tri Krama", role: "Fullstack Engineer", company: "BPBD Sulteng" },
+  {
+    name: "Khairun Nisa Cipta Hapsari",
+    role: "Backend Engineer",
+    company: "KJA Furqan",
+  },
+  {
+    name: "Anugerah Aidin Yotolembah",
+    role: "Data Scientist",
+    company: "Mknows Consulting",
+  },
+  {
+    name: "Syeikhan Ritzmy",
+    role: "Fullstack Engineer",
+    company: "Ex Intern Cakap",
+  },
+  {
+    name: "Andi Suhriani",
+    role: "Frontend Engineer",
+    company: "Ex Independent Study at RuangGuru",
+  },
+  {
+    name: "Khairul Insan Karim",
+    role: "Backend Engineer",
+    company: "Ex Independent Study at Alterra",
+  },
+  {
+    name: "Faldiansyah",
+    role: "Frontend Engineer",
+    company: "Ex Intern at Educourse.id",
+  },
+  {
+    name: "Muhamad Putra Satria",
+    role: "Frontend Engineer",
+    company: "Tan Digital",
+  },
+  { name: "Akwan Maroso", role: "Mid Backend Developer", company: "" },
+  {
+    name: "Dharma Kirti",
+    role: "Frontend Engineer",
+    company: "Studi Independen Alterra",
+  },
+  {
+    name: "Vicky Herdiansyah Adri",
+    role: "Frontend Engineer",
+    company: "Pegadaian",
+  },
+  { name: "Ryan Adi Putra", role: "Software Engineer", company: "Garena" },
+  {
+    name: "Muhammad Jindan",
+    role: "Cloud Computing",
+    company: "Studi Independen Bangkit 2022",
+  },
+  {
+    name: "Naufal Daffa Uhaq",
+    role: "Android Developer",
+    company: "Studi Independen Bangkit 2022",
+  },
+  {
+    name: "Nur Salsabila",
+    role: "Video, Motion & Multimedia",
+    company: "Studi Independen Zenius",
+  },
+  {
+    name: "Chrissavelin",
+    role: "DevOps Engineer",
+    company: "UPT TIK Untad",
   },
 ];
 
