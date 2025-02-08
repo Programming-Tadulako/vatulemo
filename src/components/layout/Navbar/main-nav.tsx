@@ -28,7 +28,9 @@ export default function MainNav() {
               </Link>
             ))}
             <Button size="sm" variant="secondary" asChild>
-              <Link href="/">Join Us</Link>
+              <Link href="https://www.instagram.com/programming.tadulako" target="_blank">
+                Join Us
+              </Link>
             </Button>
           </nav>
           <div className="flex lg:hidden">
