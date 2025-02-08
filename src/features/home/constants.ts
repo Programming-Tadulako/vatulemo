@@ -1,10 +1,6 @@
 interface GalleryImage {
-  id: string;
   src: string;
-  dimensions: {
-    height: number;
-    width: number;
-  };
+  alt: string;
 }
 
 interface BatchData {
@@ -31,28 +27,20 @@ interface FaqData {
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
-    id: "1",
-    src: "/assets/images/about/activity-img1.png",
-    dimensions: {
-      height: 300,
-      width: 400,
-    },
+    src: "/assets/images/about/pt-banner.png",
+    alt: "Programming Tadulako Banner",
   },
   {
-    id: "2",
-    src: "/assets/images/about/activity-img2.png",
-    dimensions: {
-      height: 300,
-      width: 400,
-    },
+    src: "/assets/images/about/gallery-img1.png",
+    alt: "Programming Tadulako Gallery 1",
   },
   {
-    id: "3",
-    src: "/assets/images/about/activity-img3.png",
-    dimensions: {
-      height: 300,
-      width: 400,
-    },
+    src: "/assets/images/about/gallery-img2.png",
+    alt: "Programming Tadulako Gallery 2",
+  },
+  {
+    src: "/assets/images/about/gallery-img3.png",
+    alt: "Programming Tadulako Gallery 3",
   },
 ];
 

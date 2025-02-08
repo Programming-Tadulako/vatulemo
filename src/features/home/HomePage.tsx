@@ -9,8 +9,8 @@ export default function HomePage() {
     <div>
       <HeroSection />
       <AboutSection />
-      <FeaturesSection />
       <BatchSection />
+      <FeaturesSection />
       <FaqSection />
     </div>
   );

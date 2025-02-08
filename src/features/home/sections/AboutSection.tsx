@@ -1,49 +1,48 @@
 import Image from "next/image";
 import { GALLERY_IMAGES } from "../constants";
+import { Carousel, CarouselContent, CarouselItem, CarouselNavigation } from "@/components/ui/carousel";
 
 export default function AboutSection() {
   return (
     <section id="about">
-      <div className="container space-y-8 pt-10">
-        <h1 className="text-pt-primary text-3xl font-bold lg:text-4xl">
-          About <span className="underline">Programming Tadulako</span>
-        </h1>
-        <div className="grid gap-5 lg:grid-cols-2">
-          <div className="space-y-4 text-justify">
-            <p>
-              <strong>Programming Tadulako</strong> pertama kali diinisiasi pada tahun 2012 dengan nama awal{" "}
-              <strong>Web Programming Tadulako</strong>, sebuah komunitas yang berfokus pada pengembangan pengetahuan di
-              bidang teknologi web atau web programming. Komunitas ini didirikan dengan tujuan utama untuk memberikan
-              wadah bagi Mahasiswa Universitas Tadulako dalam mempelajari dan mengasah keterampilan terkait pengembangan
-              web.
-            </p>
-            <p>
-              Seiring berjalannya waktu dan pergantian kepengurusan, nama komunitas diubah menjadi{" "}
-              <strong>Programming Tadulako</strong>. Perubahan ini bertujuan untuk memperluas cakupan pembelajaran yang
-              ditawarkan, tidak hanya terbatas pada pengembangan web, tetapi juga mencakup berbagai aspek teknologi
-              pemrograman lainnya.
-            </p>
+      <div className="container py-20 lg:py-40">
+        <Carousel>
+          <div className="flex flex-col-reverse gap-10 lg:flex-row lg:gap-16">
+            <div className="basis-1/2">
+              <CarouselContent>
+                {GALLERY_IMAGES.map((gallery, index) => (
+                  <CarouselItem key={index}>
+                    <Image
+                      src={gallery.src}
+                      alt={gallery.alt}
+                      width={1000}
+                      height={500}
+                      className="aspect-2/1 size-full rounded-md object-cover shadow-lg"
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </div>
+            <div className="basis-1/2 gap-4 lg:-mt-16">
+              <div className="flex flex-col gap-2 lg:items-end lg:gap-4">
+                <h1 className="text-pt-primary text-3xl font-bold lg:text-4xl">About Us</h1>
+                <h1 className="text-lg font-bold lg:text-right lg:text-[28px] lg:leading-10">
+                  Mewujudkan Ekosistem Teknologi Inovatif bagi Mahasiswa Universitas Tadulako
+                </h1>
+                <div className="flex flex-col gap-3 lg:items-end">
+                  <p className="text-sm leading-relaxed text-neutral-700 lg:text-right lg:text-base lg:leading-7">
+                    <strong>Programming Tadulako</strong> hadir untuk membangun ekosistem teknologi yang mendukung
+                    mahasiswa Universitas Tadulako dalam mengembangkan keterampilan yang relevan dengan dunia kerja,
+                    sehingga mereka lebih siap bersaing di industri teknologi.
+                  </p>
+                  <div className="flex items-center gap-2">
+                    <CarouselNavigation className="border-black" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <Image
-            src="/assets/images/about/pt.png"
-            alt="Logo Programming Tadulako"
-            width={688}
-            height={275}
-            className="size-full rounded-md object-contain"
-          />
-        </div>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 lg:grid-cols-3">
-          {GALLERY_IMAGES.map(({ id, src, dimensions: { height, width } }) => (
-            <Image
-              key={id}
-              src={src}
-              alt={`Gallery Image ${id}`}
-              height={height}
-              width={width}
-              className="h-auto w-full rounded-md object-cover"
-            />
-          ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

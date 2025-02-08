@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function FeaturesSection() {
   return (
     <section id="features">
-      <div className="container px-8 py-20">
+      <div className="container p-8">
         <BentoGrid>
           {FEATURES_DATA.map((feature, index) => (
             <BentoGridItem
