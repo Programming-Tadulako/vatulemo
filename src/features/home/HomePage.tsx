@@ -3,7 +3,6 @@ import BatchSection from "./sections/BatchSection";
 import FaqSection from "./sections/FaqSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import HeroSection from "./sections/HeroSection";
-import MemberSection from "./sections/MemberSection";
 
 export default function HomePage() {
   return (
@@ -11,7 +10,6 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <BatchSection />
-      <MemberSection />
       <FeaturesSection />
       <FaqSection />
     </div>
