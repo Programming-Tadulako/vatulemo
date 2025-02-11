@@ -1,15 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { SocialMedia } from "@/components/ui/social-media";
+
 import { FOOTER_DATA } from "./constant";
-import { FaDiscord, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   const { navigate, contact, social } = FOOTER_DATA;
-
-  const ICON_MAP: Record<string, React.ComponentType<{ size?: number }>> = {
-    Discord: FaDiscord,
-    Instagram: FaInstagram,
-  };
 
   return (
     <footer>
@@ -54,14 +50,7 @@ export default function Footer() {
           <div className="space-y-2">
             <h3 className="text-center text-2xl font-semibold lg:text-start">{social.title}</h3>
             <div className="flex items-center justify-center gap-2 lg:items-start lg:justify-start">
-              {social.data.map(({ name, url }) => {
-                const Icon = ICON_MAP[name];
-                return (
-                  <Link target="_blank" key={name} href={url} className="opacity-90">
-                    {Icon && <Icon size={24} />}
-                  </Link>
-                );
-              })}
+              <SocialMedia />
             </div>
           </div>
         </div>

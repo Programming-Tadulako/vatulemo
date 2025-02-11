@@ -1,10 +1,10 @@
+import Link from "next/link";
+import Image from "next/image";
+import { CircleChevronDown } from "lucide-react";
+import { SocialMedia } from "@/components/ui/social-media";
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import { CircleChevronDown } from "lucide-react";
-import { FaDiscord, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -19,14 +19,7 @@ export default function HeroSection() {
             className="text-start text-2xl font-bold"
             words={[{ text: "#GrowTogetherWithUs", className: "text-white" }]}
           />
-          <div className="flex items-center gap-4">
-            <Link target="_blank" href="https://www.instagram.com/programming.tadulako">
-              <FaInstagram size={40} />
-            </Link>
-            <Link target="_blank" href="https://discord.gg/gyBWNxAb">
-              <FaDiscord size={40} />
-            </Link>
-          </div>
+          <SocialMedia size={32} />
           <Link
             href="/#about"
             className="mx-auto mt-20 opacity-80 transition-opacity hover:scale-110 hover:opacity-100"

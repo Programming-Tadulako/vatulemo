@@ -14,7 +14,6 @@ interface FooterType {
   };
   social: {
     title: string;
-    data: FooterLink[];
   };
 }
 
@@ -55,15 +54,5 @@ export const FOOTER_DATA: FooterType = {
   },
   social: {
     title: "Social",
-    data: [
-      {
-        name: "Discord",
-        url: "https://discord.gg/gyBWNxAb",
-      },
-      {
-        name: "Instagram",
-        url: "https://www.instagram.com/programming.tadulako",
-      },
-    ],
   },
 };
