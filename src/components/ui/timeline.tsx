@@ -103,7 +103,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   alt="batch image"
                   width={500}
                   height={500}
-                  className="w-full rounded-lg object-cover shadow-sm lg:w-1/2"
+                  className="aspect-2/1 w-full rounded-lg object-cover shadow-sm lg:w-1/2"
                 />
               </div>
             </div>

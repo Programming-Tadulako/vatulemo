@@ -106,7 +106,9 @@ export const BATCH_DATA: BatchData[] = [
     year: "2024",
     title: "Soyuz",
     content: {
-      description: "Coming Soon",
+      description:
+        "Batch Soyuz adalah Batch yang terdiri dari angkatan 2023-2024 prodi Teknik Informatika, dan juga prodi Sistem Informasi, yang mempelajari:",
+      list: ["HTML, CSS, dan JS", "Git dan Github", "ReactJS / Golang"],
       image: "/assets/images/batch/batch-soyuz.png",
     },
   },
