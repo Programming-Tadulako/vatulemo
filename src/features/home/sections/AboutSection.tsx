@@ -31,10 +31,9 @@ export default function AboutSection() {
                 </h1>
                 <div className="flex flex-col gap-3 lg:items-end">
                   <p className="text-sm leading-relaxed text-neutral-700 lg:text-right lg:text-base lg:leading-7">
-                    <strong>Programming Tadulako</strong> hadir untuk membangun ekosistem teknologi yang mendukung
-                    mahasiswa Universitas Tadulako terkhusus jurusan Teknologi Informasi dalam mengembangkan
-                    keterampilan yang relevan dengan dunia kerja, sehingga mereka lebih siap bersaing di industri
-                    teknologi.
+                    <strong>Programming Tadulako</strong> hadir untuk mendukung mahasiswa Universitas Tadulako terkhusus
+                    jurusan Teknologi Informasi dalam mengembangkan keterampilan yang relevan dengan dunia kerja,
+                    sehingga mereka lebih siap bersaing di industri teknologi.
                   </p>
                   <div className="flex items-center gap-2">
                     <CarouselNavigation className="border-black" />
