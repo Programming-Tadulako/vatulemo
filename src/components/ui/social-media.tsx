@@ -29,7 +29,7 @@ const SocialMedia: React.FC<{ size?: number }> = ({ size = 24 }) => {
     <div className="flex items-center gap-4">
       {SOCIAL_MEDIA.map(({ icon: Icon, href }) => (
         <Link key={href} target="_blank" href={href}>
-          <Icon size={size} className="fill-white" />
+          <Icon size={size} className="fill-white transition-transform duration-300 hover:scale-120 hover:rotate-5" />
         </Link>
       ))}
     </div>
