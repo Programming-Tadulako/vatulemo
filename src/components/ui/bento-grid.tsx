@@ -1,4 +1,8 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export const BentoGrid = ({ className, children }: { className?: string; children?: React.ReactNode }) => {
   return (
@@ -21,10 +25,23 @@ export const BentoGridItem = ({
   header?: React.ReactNode;
   icon?: React.ReactNode;
 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial={{ scale: 0.5, y: 50, opacity: 0 }}
+      animate={isInView ? { scale: 1, y: 0, opacity: 1 } : { scale: 0.5, y: 50, opacity: 0 }}
+      transition={{
+        type: "spring",
+        mass: 3,
+        stiffness: 400,
+        damping: 50,
+        duration: 5,
+      }}
       className={cn(
-        "group/bento border-border shadow-input row-span-1 flex flex-col justify-evenly space-y-4 rounded-xl border p-4 transition duration-200 hover:shadow-xl",
+        "group/bento border-border shadow-input row-span-1 flex flex-col justify-evenly space-y-4 rounded-xl border p-4 hover:shadow-xl",
         className
       )}
     >
@@ -34,6 +51,6 @@ export const BentoGridItem = ({
         <div className="text-pt-primary mt-2 mb-2 text-2xl font-bold">{title}</div>
         <div className="max-w-2xl text-sm">{description}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
