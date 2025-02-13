@@ -6,6 +6,7 @@ import MobileNav from "./mobile-nav";
 import useScrolling from "@/hooks/useScrolling";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "./constant";
+import { TextFlip } from "@/components/ui/animations/text-flip";
 
 export default function MainNav() {
   const isScrolled = useScrolling();
@@ -24,7 +25,7 @@ export default function MainNav() {
           <nav className="hidden items-center gap-7 lg:flex">
             {NAV_LINKS.map(({ href, id, title }) => (
               <Link key={id} href={href} className="text-sm font-medium">
-                {title}
+                <TextFlip text={title} />
               </Link>
             ))}
             <Button size="sm" variant="secondary" asChild>
