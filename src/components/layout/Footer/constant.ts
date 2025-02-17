@@ -23,7 +23,7 @@ export const FOOTER_DATA: FooterType = {
     data: [
       {
         name: "Home",
-        url: "/",
+        url: "/#home",
       },
       {
         name: "About",
