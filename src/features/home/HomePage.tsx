@@ -6,7 +6,7 @@ import HeroSection from "./sections/HeroSection";
 
 export default function HomePage() {
   return (
-    <div>
+    <div id="home">
       <HeroSection />
       <AboutSection />
       <BatchSection />
