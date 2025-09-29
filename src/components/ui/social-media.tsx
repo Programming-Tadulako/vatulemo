@@ -4,31 +4,35 @@ import InstagramLogo from "@/components/icon/instagram-logo";
 import LinkedinLogo from "@/components/icon/linkedin-logo";
 import Link from "next/link";
 
-interface SocialMedia {
+interface SocialMediaItem {
   icon: React.FC<IconProps>;
   href: string;
   label: string;
 }
 
-const SocialMedia: React.FC<{ size?: number }> = ({ size = 24 }) => {
-  const SOCIAL_MEDIA: SocialMedia[] = [
-    {
-      icon: InstagramLogo,
-      href: "https://www.instagram.com/programming.tadulako",
-      label: "Follow Programming Tadulako on Instagram",
-    },
-    {
-      icon: DiscordLogo,
-      href: "https://discord.gg/gyBWNxAb",
-      label: "Join Programming Tadulako Discord community",
-    },
-    {
-      icon: LinkedinLogo,
-      href: "https://www.linkedin.com/company/programming-tadulako",
-      label: "Connect with Programming Tadulako on LinkedIn",
-    },
-  ];
+const SOCIAL_MEDIA: SocialMediaItem[] = [
+  {
+    icon: InstagramLogo,
+    href: "https://www.instagram.com/programming.tadulako",
+    label: "Follow Programming Tadulako on Instagram",
+  },
+  {
+    icon: DiscordLogo,
+    href: "https://discord.gg/gyBWNxAb",
+    label: "Join Programming Tadulako Discord community",
+  },
+  {
+    icon: LinkedinLogo,
+    href: "https://www.linkedin.com/company/programming-tadulako",
+    label: "Connect with Programming Tadulako on LinkedIn",
+  },
+];
 
+interface SocialMediaProps {
+  size?: number;
+}
+
+const SocialMedia: React.FC<SocialMediaProps> = ({ size = 24 }) => {
   return (
     <div className="flex items-center gap-4">
       {SOCIAL_MEDIA.map(({ icon: Icon, href, label }) => (
