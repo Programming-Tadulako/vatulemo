@@ -1,24 +1,32 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface TeamMember {
   name: string;
   role: string;
   company: string;
-  isActive: boolean;
+  avatarUrl: string;
 }
 
-const TeamCard = ({ name, role, company, isActive }: TeamMember) => {
-  const currPosition = isActive ? `${role} at ${company}` : `Ex ${role} at ${company}`;
+const TeamCard = ({ name, role, company, avatarUrl }: TeamMember) => {
+  const currPosition = `${role} at ${company}`;
+  const baseUrl = "https://raw.githubusercontent.com/Programming-Tadulako/our-members/refs/heads/main";
 
   return (
-    <figure className="relative h-full w-72 cursor-pointer overflow-hidden rounded-xl border border-gray-950/10 bg-gray-950/1 p-4 hover:bg-gray-950/5">
-      <div className="flex items-center gap-2">
-        <Image width={24} height={24} alt={name} src="/assets/icons/ic_pt-dark.svg" className="shrink-0 rounded-full" />
-        <div className="space-y-1">
-          <figcaption className="text-sm font-medium">{name}</figcaption>
-          <p className="line-clamp-2 text-xs font-medium text-gray-600">{currPosition}</p>
-        </div>
+    <figure className="relative flex h-full w-md cursor-pointer items-center gap-2 overflow-hidden rounded-xl border border-gray-950/10 bg-gray-950/1 p-8 hover:bg-gray-950/5">
+      <Image
+        width={56}
+        height={56}
+        alt={name.charAt(0).toUpperCase()}
+        src={avatarUrl ? `${baseUrl}/${avatarUrl}` : "/assets/icons/ic_pt-dark.svg"}
+        className="ring-border size-14 rounded-full object-cover ring-2"
+      />
+
+      <div className="space-y-1">
+        <figcaption className="font-semibold">{name}</figcaption>
+        <p className="line-clamp-2 text-sm font-medium text-pretty text-gray-600">{currPosition}</p>
       </div>
     </figure>
   );
@@ -44,17 +52,28 @@ export default async function MembersSection() {
           </p>
         </div>
 
-        <div className="relative mt-4 flex w-full flex-col items-center justify-center overflow-hidden">
-          <Marquee pauseOnHover className="[--duration:20s]">
-            {firstRow.map((member) => (
-              <TeamCard key={member.name} {...member} />
-            ))}
-          </Marquee>
-          <Marquee reverse pauseOnHover className="[--duration:20s]">
-            {secondRow.map((member) => (
-              <TeamCard key={member.name} {...member} />
-            ))}
-          </Marquee>
+        <div className="relative mt-4 overflow-hidden">
+          <Suspense
+            fallback={
+              <div className="grid grid-cols-3 gap-4">
+                {Array.from({ length: 6 }).map((_, index) => (
+                  <Skeleton key={index} className="h-32 w-full rounded-md" />
+                ))}
+              </div>
+            }
+          >
+            <Marquee pauseOnHover className="[--duration:20s]">
+              {firstRow.map((member) => (
+                <TeamCard key={member.name} {...member} />
+              ))}
+            </Marquee>
+            <Marquee reverse pauseOnHover className="[--duration:20s]">
+              {secondRow.map((member) => (
+                <TeamCard key={member.name} {...member} />
+              ))}
+            </Marquee>
+          </Suspense>
+
           <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r" />
           <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l" />
         </div>
