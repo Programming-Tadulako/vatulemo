@@ -112,6 +112,15 @@ export const BATCH_DATA: BatchData[] = [
       image: "/assets/images/batch/batch-soyuz.png",
     },
   },
+  {
+    year: "2025",
+    title: "Coming Soon",
+    content: {
+      description: "Coming Soon",
+      list: ["HTML, CSS, dan JS", "Git dan Github", "ReactJS / Golang"],
+      image: "/assets/images/batch/batch-comingsoon.png",
+    },
+  },
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
