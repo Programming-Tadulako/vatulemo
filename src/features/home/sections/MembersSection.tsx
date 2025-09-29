@@ -3,14 +3,14 @@ import Image from "next/image";
 import { Marquee } from "@/components/ui/marquee";
 import { Skeleton } from "@/components/ui/skeleton";
 
-interface TeamMember {
+interface Member {
   name: string;
   role: string;
   company: string;
   avatarUrl: string;
 }
 
-const TeamCard = ({ name, role, company, avatarUrl }: TeamMember) => {
+const MemberCard = ({ name, role, company, avatarUrl }: Member) => {
   const currPosition = `${role} at ${company}`;
   const baseUrl = "https://raw.githubusercontent.com/Programming-Tadulako/our-members/refs/heads/main";
 
@@ -35,7 +35,7 @@ const TeamCard = ({ name, role, company, avatarUrl }: TeamMember) => {
 export default async function MembersSection() {
   const TEAM_MEMBERS_URL =
     "https://raw.githubusercontent.com/Programming-Tadulako/our-members/refs/heads/main/our_members.json";
-  const TEAM_MEMBERS: TeamMember[] = await fetch(TEAM_MEMBERS_URL)
+  const TEAM_MEMBERS: Member[] = await fetch(TEAM_MEMBERS_URL)
     .then((res) => res.json())
     .catch(() => []);
 
@@ -64,12 +64,12 @@ export default async function MembersSection() {
           >
             <Marquee pauseOnHover className="[--duration:20s]">
               {firstRow.map((member) => (
-                <TeamCard key={member.name} {...member} />
+                <MemberCard key={member.name} {...member} />
               ))}
             </Marquee>
             <Marquee reverse pauseOnHover className="[--duration:20s]">
               {secondRow.map((member) => (
-                <TeamCard key={member.name} {...member} />
+                <MemberCard key={member.name} {...member} />
               ))}
             </Marquee>
           </Suspense>
