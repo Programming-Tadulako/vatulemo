@@ -20,7 +20,14 @@ export default function MobileNav() {
         <SheetHeader>
           <SheetTitle className="flex justify-center">
             <Link href="/" onClick={() => setIsOpen(false)}>
-              <Image src="/assets/icons/ic_pt-white.svg" alt="Programming Tadulako" width={40} height={40} />
+              <Image
+                src="/assets/icons/ic_pt-white.svg"
+                alt="Programming Tadulako"
+                width={40}
+                height={40}
+                priority
+                className="w-10"
+              />
             </Link>
           </SheetTitle>
           <SheetDescription asChild>

@@ -7,6 +7,7 @@ import Link from "next/link";
 interface SocialMedia {
   icon: React.FC<IconProps>;
   href: string;
+  label: string;
 }
 
 const SocialMedia: React.FC<{ size?: number }> = ({ size = 24 }) => {
@@ -14,21 +15,24 @@ const SocialMedia: React.FC<{ size?: number }> = ({ size = 24 }) => {
     {
       icon: InstagramLogo,
       href: "https://www.instagram.com/programming.tadulako",
+      label: "Follow Programming Tadulako on Instagram",
     },
     {
       icon: DiscordLogo,
       href: "https://discord.gg/gyBWNxAb",
+      label: "Join Programming Tadulako Discord community",
     },
     {
       icon: LinkedinLogo,
       href: "https://www.linkedin.com/company/programming-tadulako",
+      label: "Connect with Programming Tadulako on LinkedIn",
     },
   ];
 
   return (
     <div className="flex items-center gap-4">
-      {SOCIAL_MEDIA.map(({ icon: Icon, href }) => (
-        <Link key={href} target="_blank" href={href}>
+      {SOCIAL_MEDIA.map(({ icon: Icon, href, label }) => (
+        <Link key={href} target="_blank" href={href} aria-label={label}>
           <Icon size={size} className="fill-white transition-transform duration-300 hover:scale-120 hover:rotate-5" />
         </Link>
       ))}

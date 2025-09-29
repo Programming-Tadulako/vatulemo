@@ -19,7 +19,14 @@ export default function MainNav() {
       <div className="container py-5">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/assets/icons/ic_pt-white.svg" alt="Programming Tadulako" width={36} height={36} />
+            <Image
+              src="/assets/icons/ic_pt-white.svg"
+              alt="Programming Tadulako"
+              width={36}
+              height={36}
+              priority
+              className="size-9"
+            />
           </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">

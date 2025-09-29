@@ -11,7 +11,15 @@ export default function HeroSection() {
     <section id="hero" className="relative">
       <div className="min-h-screen bg-[url('/assets/images/hero/bg_hero-waves.svg')] bg-cover bg-center bg-no-repeat">
         <div className="relative z-10 container mx-auto flex max-w-3xl flex-col gap-4 pt-44 text-white lg:items-center">
-          <Image src="/assets/icons/ic_pt_full-white.svg" alt="Programming Tadulako" width={500} height={150} />
+          <Image
+            src="/assets/icons/ic_pt_full-white.svg"
+            alt="Programming Tadulako"
+            width={500}
+            height={150}
+            fetchPriority="high"
+            priority
+            className="h-[150px] w-[500px]"
+          />
           <p className="text-lg lg:text-center lg:text-2xl">
             A community based in Palu, Indonesia. <br /> Learn about programming, softskills, and teamwork.
           </p>
@@ -23,6 +31,7 @@ export default function HeroSection() {
           <Link
             href="/#about"
             className="mx-auto mt-32 opacity-80 transition-all hover:scale-110 hover:opacity-100 md:mt-16"
+            aria-label="Scroll Down"
           >
             <CircleChevronDown size={20} className="text-white" />
           </Link>

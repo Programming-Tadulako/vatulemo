@@ -6,8 +6,11 @@ export default function BatchSection() {
   return (
     <section id="faq">
       <SlideUp>
-        <div className="container py-20">
-          <h1 className="text-pt-primary pb-8 text-center text-4xl font-bold uppercase">FAQ</h1>
+        <div className="container space-y-8 py-20">
+          <div className="space-y-2">
+            <h1 className="text-pt-primary text-center text-4xl font-bold uppercase">FAQ</h1>
+            <h2 className="text-center text-lg font-semibold">Frequently Asked Questions</h2>
+          </div>
           <Accordion type="single" collapsible>
             {FAQ_DATA.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>
