@@ -4,7 +4,7 @@ import { FAQ_DATA } from "@/features/home/constants";
 
 export default function BatchSection() {
   return (
-    <section id="faq">
+    <section id="faq" className="scroll-mt-8">
       <SlideUp>
         <div className="container space-y-8 py-20">
           <div className="space-y-2">

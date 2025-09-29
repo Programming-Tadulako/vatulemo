@@ -4,7 +4,7 @@ import { BATCH_DATA } from "@/features/home/constants";
 
 export default function BatchSection() {
   return (
-    <section id="batch">
+    <section id="batch" className="scroll-mt-8">
       <SlideUp>
         <Timeline data={BATCH_DATA} />
       </SlideUp>

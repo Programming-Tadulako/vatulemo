@@ -5,7 +5,7 @@ import { GALLERY_IMAGES } from "../constants";
 
 export default function AboutSection() {
   return (
-    <section id="about">
+    <section id="about" className="scroll-mt-8">
       <SlideUp>
         <div className="container pt-10 pb-20 lg:py-40">
           <Carousel>
