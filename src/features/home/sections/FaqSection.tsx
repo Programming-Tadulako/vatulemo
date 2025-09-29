@@ -4,13 +4,14 @@ import { FAQ_DATA } from "@/features/home/constants";
 
 export default function BatchSection() {
   return (
-    <section id="faq" className="scroll-mt-8">
+    <section id="faq" className="scroll-mt-28 md:scroll-mt-32">
       <SlideUp>
-        <div className="container space-y-8 py-20">
+        <div className="container space-y-8">
           <div className="space-y-2">
-            <h1 className="text-pt-primary text-center text-4xl font-bold uppercase">FAQ</h1>
-            <h2 className="text-center text-lg font-semibold">Frequently Asked Questions</h2>
+            <h2 className="text-pt-primary text-3xl font-bold lg:text-center lg:text-4xl">FAQ</h2>
+            <p className="text-sm text-neutral-700 md:text-base lg:text-center">Frequently Asked Questions</p>
           </div>
+
           <Accordion type="single" collapsible>
             {FAQ_DATA.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`}>

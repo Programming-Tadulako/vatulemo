@@ -8,7 +8,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative scroll-mt-8">
+    <section id="hero" className="relative">
       <div className="min-h-screen bg-[url('/assets/images/hero/bg_hero-waves.svg')] bg-cover bg-center bg-no-repeat">
         <div className="relative z-10 container mx-auto flex max-w-3xl flex-col gap-4 pt-44 text-white lg:items-center">
           <Image

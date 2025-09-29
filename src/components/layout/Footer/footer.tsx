@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <Image src="/assets/images/footer/waves.svg" alt="Footer Waves" width={2000} height={1000} />
+      <Image src="/assets/images/footer/waves.svg" alt="Footer Waves" width={2000} height={1000} className="mt-8" />
       <div className="bg-pt-primary py-12 text-white">
         <div className="container grid items-center justify-center justify-items-center gap-8 lg:grid-cols-4 lg:items-start">
           <Link href="/">

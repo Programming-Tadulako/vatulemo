@@ -3,35 +3,6 @@ interface GalleryImage {
   alt: string;
 }
 
-interface BatchData {
-  year: string;
-  title: string;
-  content: {
-    description: string;
-    list?: string[];
-    image: string;
-  };
-}
-
-interface TeamMember {
-  name: string;
-  role: string;
-  company: string;
-  isActive: boolean;
-}
-
-interface FeaturesData {
-  title: string;
-  header: string;
-  description?: string;
-  span?: boolean;
-}
-
-interface FaqData {
-  title: string;
-  description: string;
-}
-
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     src: "/assets/images/about/pt-banner.webp",
@@ -50,6 +21,16 @@ export const GALLERY_IMAGES: GalleryImage[] = [
     alt: "Programming Tadulako Gallery 3",
   },
 ];
+
+interface BatchData {
+  year: string;
+  title: string;
+  content: {
+    description: string;
+    list?: string[];
+    image: string;
+  };
+}
 
 export const BATCH_DATA: BatchData[] = [
   {
@@ -123,104 +104,12 @@ export const BATCH_DATA: BatchData[] = [
   },
 ];
 
-export const TEAM_MEMBERS: TeamMember[] = [
-  {
-    name: "Tri Krama",
-    role: "Fullstack Engineer",
-    company: "BPBD Sulteng",
-    isActive: true,
-  },
-  {
-    name: "Khairun Nisa Cipta Hapsari",
-    role: "Backend Engineer",
-    company: "KJA Furqan",
-    isActive: true,
-  },
-  {
-    name: "Anugerah Aidin Yotolembah",
-    role: "Data Scientist",
-    company: "Mknows Consulting",
-    isActive: true,
-  },
-  {
-    name: "Syeikhan Ritzmy",
-    role: "Fullstack Engineer",
-    company: "Intern Cakap",
-    isActive: false,
-  },
-  {
-    name: "Andi Suhriani",
-    role: "Frontend Engineer",
-    company: "Independent Study at RuangGuru",
-    isActive: false,
-  },
-  {
-    name: "Khairul Insan Karim",
-    role: "Backend Engineer",
-    company: "Independent Study at Alterra",
-    isActive: false,
-  },
-  {
-    name: "Faldiansyah",
-    role: "Frontend Engineer",
-    company: "Intern at Educourse.id",
-    isActive: false,
-  },
-  {
-    name: "Muhamad Putra Satria",
-    role: "Frontend Engineer",
-    company: "Tan Digital",
-    isActive: true,
-  },
-  {
-    name: "Akwan Maroso",
-    role: "Mid Backend Developer",
-    company: "",
-    isActive: true,
-  },
-  {
-    name: "Dharma Kirti",
-    role: "Frontend Engineer",
-    company: "Studi Independen Alterra",
-    isActive: true,
-  },
-  {
-    name: "Vicky Herdiansyah Adri",
-    role: "Frontend Engineer",
-    company: "Pegadaian",
-    isActive: true,
-  },
-  {
-    name: "Ryan Adi Putra",
-    role: "Software Engineer",
-    company: "Garena",
-    isActive: true,
-  },
-  {
-    name: "Muhammad Jindan",
-    role: "Cloud Computing",
-    company: "Studi Independen Bangkit 2022",
-    isActive: false,
-  },
-  {
-    name: "Naufal Daffa Uhaq",
-    role: "Android Developer",
-    company: "Studi Independen Bangkit 2022",
-    isActive: false,
-  },
-  {
-    name: "Nur Salsabila",
-    role: "Video, Motion & Multimedia",
-    company: "Studi Independen Zenius",
-    isActive: false,
-  },
-  {
-    name: "Chrissavelin",
-    role: "DevOps Engineer",
-    company: "UPT TIK Untad",
-    isActive: true,
-  },
-];
+interface FeaturesData {
+  title: string;
+  header: string;
+  description?: string;
+  span?: boolean;
+}
 
 export const FEATURES_DATA: FeaturesData[] = [
   {
@@ -247,6 +136,11 @@ export const FEATURES_DATA: FeaturesData[] = [
     span: true,
   },
 ];
+
+interface FaqData {
+  title: string;
+  description: string;
+}
 
 export const FAQ_DATA: FaqData[] = [
   {
