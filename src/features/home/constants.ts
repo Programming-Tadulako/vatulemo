@@ -34,19 +34,19 @@ interface FaqData {
 
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
-    src: "/assets/images/about/pt-banner.png",
+    src: "/assets/images/about/pt-banner.webp",
     alt: "Programming Tadulako Banner",
   },
   {
-    src: "/assets/images/about/gallery-img1.png",
+    src: "/assets/images/about/gallery-img1.webp",
     alt: "Programming Tadulako Gallery 1",
   },
   {
-    src: "/assets/images/about/gallery-img2.png",
+    src: "/assets/images/about/gallery-img2.webp",
     alt: "Programming Tadulako Gallery 2",
   },
   {
-    src: "/assets/images/about/gallery-img3.png",
+    src: "/assets/images/about/gallery-img3.webp",
     alt: "Programming Tadulako Gallery 3",
   },
 ];
@@ -59,7 +59,7 @@ export const BATCH_DATA: BatchData[] = [
       description:
         "Batch Fiery Hydrogen adalah Batch yang terdiri dari angkatan 2019 prodi Teknik Informatika, dan juga prodi Sistem Informasi yang mempelajari:",
       list: ["HTML, CSS, dan JS", "Python", "Git dan Github", "Netlify"],
-      image: "/assets/images/batch/batch-fieryhydrogen.png",
+      image: "/assets/images/batch/batch-fieryhydrogen.webp",
     },
   },
   {
@@ -69,7 +69,7 @@ export const BATCH_DATA: BatchData[] = [
       description:
         "Batch Apollo adalah Batch yang terdiri dari angkatan 2020 prodi Teknik Informatika, dan juga prodi Sistem Informasi, yang mempelajari:",
       list: ["HTML, CSS, dan JS", "Golang", "Git dan Github", "ReactJS"],
-      image: "/assets/images/batch/batch-apollo.png",
+      image: "/assets/images/batch/batch-apollo.webp",
     },
   },
   {
@@ -79,7 +79,7 @@ export const BATCH_DATA: BatchData[] = [
       description:
         "Batch Voyager adalah Batch yang terdiri dari angkatan 2020-2021 prodi Teknik Informatika, dan juga prodi Sistem Informasi, yang mempelajari:",
       list: ["HTML, CSS, dan JS", "Git dan Github", "Deploy Project"],
-      image: "/assets/images/batch/batch-voyager.png",
+      image: "/assets/images/batch/batch-voyager.webp",
     },
   },
   {
@@ -89,7 +89,7 @@ export const BATCH_DATA: BatchData[] = [
       description:
         "Batch Rover adalah Batch yang terdiri dari angkatan 2021-2022 prodi Teknik Informatika, dan juga prodi Sistem Informasi, yang mempelajari:",
       list: ["HTML, CSS, dan JS", "Git dan Github", "ReactJS / Golang"],
-      image: "/assets/images/batch/batch-rover.png",
+      image: "/assets/images/batch/batch-rover.webp",
     },
   },
   {
@@ -99,7 +99,7 @@ export const BATCH_DATA: BatchData[] = [
       description:
         "Batch Astrosphere adalah Batch yang terdiri dari angkatan 2022-2023 prodi Teknik Informatika, dan juga prodi Sistem Informasi, yang mempelajari:",
       list: ["HTML, CSS, dan JS", "Git dan Github", "ReactJS / Golang"],
-      image: "/assets/images/batch/batch-astrosphere.png",
+      image: "/assets/images/batch/batch-astrosphere.webp",
     },
   },
   {
@@ -109,7 +109,7 @@ export const BATCH_DATA: BatchData[] = [
       description:
         "Batch Soyuz adalah Batch yang terdiri dari angkatan 2023-2024 prodi Teknik Informatika, dan juga prodi Sistem Informasi, yang mempelajari:",
       list: ["HTML, CSS, dan JS", "Git dan Github", "ReactJS / Golang"],
-      image: "/assets/images/batch/batch-soyuz.png",
+      image: "/assets/images/batch/batch-soyuz.webp",
     },
   },
   {
@@ -118,7 +118,7 @@ export const BATCH_DATA: BatchData[] = [
     content: {
       description: "Coming Soon",
       list: ["HTML, CSS, dan JS", "Git dan Github", "ReactJS / Golang"],
-      image: "/assets/images/batch/batch-comingsoon.png",
+      image: "/assets/images/batch/batch-comingsoon.webp",
     },
   },
 ];
@@ -225,23 +225,23 @@ export const TEAM_MEMBERS: TeamMember[] = [
 export const FEATURES_DATA: FeaturesData[] = [
   {
     title: "Build Your Tech Foundation",
-    header: "/assets/images/features/features_header1.png",
+    header: "/assets/images/features/features_header1.webp",
     description:
       "Mulai dengan HTML/CSS/JS dasar, dan pilih path-mu: Frontend with React atau Backend with Golang. Lengkapi dengan Git/Github workflow!",
     span: true,
   },
   {
     title: "Master Modern Stacks",
-    header: "/assets/images/features/features_header2.png",
+    header: "/assets/images/features/features_header2.webp",
   },
   {
     title: "Never Code Alone",
-    header: "/assets/images/features/features_header3.png",
+    header: "/assets/images/features/features_header3.webp",
     description: "Ada banyak mentor berpengalaman yang siap membantumu.",
   },
   {
     title: "Code Chill Repeat",
-    header: "/assets/images/features/features_header4.png",
+    header: "/assets/images/features/features_header4.webp",
     description:
       "Yuk liburan bareng kami! Jauhkan sejenak dari rutinitas, recharge energi, dan upgrade skill. Coding, chill, repeat!",
     span: true,
