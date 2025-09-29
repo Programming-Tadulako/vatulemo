@@ -15,7 +15,7 @@ const TeamCard = ({ name, role, company, avatarUrl }: TeamMember) => {
   const baseUrl = "https://raw.githubusercontent.com/Programming-Tadulako/our-members/refs/heads/main";
 
   return (
-    <figure className="relative flex h-full w-md cursor-pointer items-center gap-2 overflow-hidden rounded-xl border border-gray-950/10 bg-gray-950/1 p-8 hover:bg-gray-950/5">
+    <figure className="border-border shadow-input relative flex h-full w-md cursor-pointer items-center gap-2 overflow-hidden rounded-xl border p-8 hover:shadow-md">
       <Image
         width={56}
         height={56}
