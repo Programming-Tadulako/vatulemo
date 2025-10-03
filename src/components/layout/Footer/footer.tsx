@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Navigate */}
           <div className="space-y-2">
             <h3 className="text-center text-2xl font-semibold lg:text-start">{navigate.title}</h3>
-            <div className="flex flex-col items-center gap-2 lg:items-start">
+            <div className="grid gap-x-4 gap-y-2 text-center lg:grid-cols-3 lg:text-start">
               {navigate.data.map(({ name, url }) => (
                 <Link key={name} href={url} className="text-sm opacity-90 hover:underline">
                   {name}
