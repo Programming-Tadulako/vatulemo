@@ -5,7 +5,7 @@ export default function ProjectSections() {
     <section id="projects" className="scroll-mt-28 md:scroll-mt-32">
       <div className="container space-y-8 px-8">
         <div className="space-y-2">
-          <h2 className="text-pt-primary text-3xl font-bold lg:text-center lg:text-4xl">Community Projects</h2>
+          <h2 className="text-pt-primary text-3xl font-bold lg:text-center lg:text-4xl">Project Showcase</h2>
           <p className="text-sm text-neutral-700 md:text-base lg:text-center">
             Showcasing amazing projects built by our talented community members. Each project represents creativity,
             dedication, and technical excellence.
