@@ -1,4 +1,4 @@
-import { SlideUp } from "@/components/ui/animations/slide-up";
+import { SlideUp } from "@/components/animations/slide-up";
 import { Timeline } from "@/components/ui/timeline";
 import { BATCH_DATA } from "@/features/home/constants";
 

@@ -1,4 +1,5 @@
 import ProjectCard from "../components/ProjectCard";
+import { StaggerContainer, StaggerItem } from "@/components/animations/stagger";
 
 export default function ProjectSections() {
   return (
@@ -12,18 +13,24 @@ export default function ProjectSections() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+          useInView={true}
+          staggerChildren={0.1}
+          delayChildren={0.4}
+        >
           {PROJECTS.map((project) => (
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              username={project.username}
-              description={project.description}
-              url={project.url}
-              screenshot={`https://api.microlink.io/?url=${project.url}&screenshot=true&embed=screenshot.url`}
-            />
+            <StaggerItem key={project.id}>
+              <ProjectCard
+                title={project.title}
+                username={project.username}
+                description={project.description}
+                url={project.url}
+                screenshot={`https://api.microlink.io/?url=${project.url}&screenshot=true&embed=screenshot.url`}
+              />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

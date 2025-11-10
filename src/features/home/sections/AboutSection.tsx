@@ -1,4 +1,4 @@
-import { SlideUp } from "@/components/ui/animations/slide-up";
+import { SlideUp } from "@/components/animations/slide-up";
 import { Carousel, CarouselContent, CarouselItem, CarouselNavigation } from "@/components/ui/carousel";
 import Image from "next/image";
 import { GALLERY_IMAGES } from "../constants";

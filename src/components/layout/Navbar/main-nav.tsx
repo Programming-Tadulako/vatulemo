@@ -6,7 +6,7 @@ import MobileNav from "./mobile-nav";
 import useScrolling from "@/hooks/useScrolling";
 import { Button } from "@/components/ui/button";
 import { NAV_LINKS } from "./constant";
-import { TextFlip } from "@/components/ui/animations/text-flip";
+import { TextFlip } from "@/components/animations/text-flip";
 
 export default function MainNav() {
   const isScrolled = useScrolling();
