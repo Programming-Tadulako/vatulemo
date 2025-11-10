@@ -1,36 +1,155 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vatulemo - Programming Tadulako Website
 
-## Getting Started
+A modern, responsive website for Programming Tadulako (Batch Soyuz) built with Next.js, React, and Tailwind CSS.
 
-First, run the development server:
+## 📋 Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Code Quality](#code-quality)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🎯 About
+
+Vatulemo is the official website for Programming Tadulako, showcasing information about the organization. The website features modern animations, responsive design, and an intuitive user interface.
+
+## ✨ Features
+
+- **Home Page** - Overview of Programming Tadulako
+- **Responsive Design** - Mobile-first approach with seamless desktop experience
+- **Modern Animations** - Smooth transitions and interactive elements using Motion
+- **Optimized Performance** - Next.js App Router for optimal performance
+
+## 🛠 Tech Stack
+
+### Core
+
+- **[Next.js](https://nextjs.org/)** - React framework with App Router
+- **[React](https://react.dev/)** - UI library
+- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
+
+### Styling
+
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Tailwind Animate](https://github.com/jamiebuilds/tailwindcss-animate)** - Animation utilities
+- **[PostCSS](https://postcss.org/)** - CSS transformation
+
+### UI Components
+
+- **[shadcnUI](https://ui.shadcn.com/)** - UI components
+- **[Lucide React](https://lucide.dev/)** - Icon library
+- **[Motion](https://motion.dev/)** - Animation library
+
+### Development Tools
+
+- **[ESLint](https://eslint.org/)** - Linting
+- **[Prettier](https://prettier.io/)** - Code formatting
+- **[Husky](https://typicode.github.io/husky/)** - Git hooks
+- **[lint-staged](https://github.com/okonet/lint-staged)** - Pre-commit linting
+- **[pnpm](https://pnpm.io/)** - Package manager
+
+## 📁 Project Structure
+
+```
+vatulemo/
+├── .github/                # Github stuffs
+├── .husky/                 # Git hooks
+├── public/                 # Static assets
+│   └── assets/
+│       ├── icons/         # Icon files
+│       └── images/        # Image files
+├── src/
+│   ├── app/               # Next.js App Router
+│   │   ├── globals.css   # Global styles
+│   │   ├── layout.tsx    # Root layout
+│   │   ├── page.tsx      # Home page
+│   │   └── not-found.tsx # 404 page
+│   ├── components/        # Reusable components
+│   │   ├── animations/   # Animation components
+│   │   ├── icon/         # Icon components
+│   │   ├── layout/       # Layout components
+│   │   └── ui/           # UI components
+│   ├── features/          # Feature modules
+│   │   └── home/         # Home page feature
+│   │       └── index.tsx
+│   ├── hooks/            # Custom React hooks
+│   └── lib/              # Utility functions
+├── components.json       # UI component config
+├── eslint.config.mjs     # ESLint configuration
+├── next.config.ts        # Next.js configuration
+├── tsconfig.json         # TypeScript configuration
+├── postcss.config.mjs    # PostCSS configuration
+└── package.json          # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Node.js 20+
+- pnpm (yea, you're forced)
 
-## Learn More
+### Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone https://github.com/Programming-Tadulako/vatulemo.git
+cd vatulemo
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Install dependencies:
 
-## Deploy on Vercel
+```bash
+pnpm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Run the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## 📜 Available Scripts
+
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm format` - Format code with Prettier
+- `pnpm check-format` - Check code formatting
+
+## 🎨 Code Quality
+
+This project uses several tools to maintain code quality:
+
+- **Prettier** - Automatic code formatting
+- **ESLint** - Code linting with Next.js config
+- **Husky** - Git hooks for pre-commit checks
+- **lint-staged** - Run linters on staged files
+
+Pre-commit hooks automatically format your code before committing.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feat/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat(scope): add some amazing feature'`)
+4. Push to the branch (`git push origin feat/amazing-feature`)
+5. Open a Pull Request
+
+Please ensure your code follows the project's coding standards and passes all linting checks.
+
+## 📄 License
+
+This project is private and maintained by Programming Tadulako.
+
+---
+
+**Built with ❤️ by Programming Tadulako - Development Team**
