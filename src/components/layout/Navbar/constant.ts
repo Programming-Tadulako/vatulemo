@@ -27,6 +27,11 @@ export const NAV_LINKS: NavLink[] = [
   },
   {
     id: "5",
+    href: "/#projects",
+    title: "Projects",
+  },
+  {
+    id: "6",
     href: "/#faq",
     title: "FAQ",
   },
