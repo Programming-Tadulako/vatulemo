@@ -19,7 +19,12 @@ export default function ProjectCard({ title, username, description, url, screens
 
   return (
     <Card className="group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <div className="bg-muted relative aspect-video overflow-hidden">
+      <Link
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-muted relative aspect-video overflow-hidden"
+      >
         <Image
           src={screenshot}
           alt={`${title} Screenshot`}
@@ -30,7 +35,7 @@ export default function ProjectCard({ title, username, description, url, screens
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
-      </div>
+      </Link>
 
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
@@ -48,13 +53,13 @@ export default function ProjectCard({ title, username, description, url, screens
       </CardHeader>
 
       <CardContent>
-        <p className="text-muted-foreground mb-4 line-clamp-3 text-sm">{description}</p>
+        <p className="text-muted-foreground mb-4 line-clamp-2 text-sm">{description}</p>
 
         <Link
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-primary hover:text-pt-primary inline-flex items-center gap-2 text-sm font-medium transition-colors"
+          className="text-primary hover:text-pt-primary inline-flex items-center gap-2 text-sm font-medium transition-colors group-hover:underline"
         >
           <span>View Project</span>
           <ExternalLink className="h-4 w-4" />
