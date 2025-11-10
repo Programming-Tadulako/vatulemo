@@ -1,12 +1,12 @@
 "use client";
 
-import { easeOut, motion } from "framer-motion";
+import { easeOut, motion } from "motion/react";
 
 interface SlideUpProps {
   children: React.ReactNode;
 }
 
-export const SlideUp = ({ children }: SlideUpProps) => {
+export function SlideUp({ children }: SlideUpProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -17,4 +17,4 @@ export const SlideUp = ({ children }: SlideUpProps) => {
       {children}
     </motion.div>
   );
-};
+}
