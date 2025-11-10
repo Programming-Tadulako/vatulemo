@@ -1,5 +1,6 @@
-import ProjectCard from "../components/ProjectCard";
 import { StaggerContainer, StaggerItem } from "@/components/animations/stagger";
+import { PROJECTS } from "@/features/home/constants";
+import ProjectCard from "@/features/home/components/ProjectCard";
 
 export default function ProjectSections() {
   return (
@@ -24,7 +25,7 @@ export default function ProjectSections() {
               <ProjectCard
                 title={project.title}
                 username={project.username}
-                description={project.description}
+                description={`Created by ${project.username} as part of Programming Tadulako's learning journey. This project demonstrates the practical application of web development skills and modern technologies learned through our community program.`}
                 url={project.url}
                 screenshot={`https://api.microlink.io/?url=${project.url}&screenshot=true&embed=screenshot.url`}
               />
@@ -35,90 +36,3 @@ export default function ProjectSections() {
     </section>
   );
 }
-
-const PROJECTS = [
-  {
-    id: 1,
-    title: "Bagus Garden",
-    username: "diL-duL",
-    description:
-      "A beautiful garden management system with features for plant tracking, watering schedules, and growth monitoring. Built with modern web technologies.",
-    url: "https://github.com/diL-duL/bagusGarden",
-  },
-  {
-    id: 2,
-    title: "Serayapus",
-    username: "serayapus",
-    description:
-      "An innovative web application showcasing creative solutions and interactive user experiences with responsive design.",
-    url: "https://serayapus.netlify.app/",
-  },
-  {
-    id: 3,
-    title: "Submission Soyuz",
-    username: "farizzidirli",
-    description:
-      "A comprehensive project submission platform designed for the Soyuz program, featuring modern UI and seamless navigation.",
-    url: "https://submission-soyuz-farizzidirli.vercel.app/",
-  },
-  {
-    id: 4,
-    title: "Submission Soyuz",
-    username: "Lieff246",
-    description: "A well-crafted submission project with clean code architecture and user-friendly interface design.",
-    url: "https://lieff246.github.io/Submission-Soyuz/",
-  },
-  {
-    id: 5,
-    title: "Submission Soyuz",
-    username: "yulii18",
-    description:
-      "An elegant solution for project submissions with focus on user experience and performance optimization.",
-    url: "https://github.com/yulii18/submission_soyuz.git",
-  },
-  {
-    id: 6,
-    title: "Home Project",
-    username: "community-member",
-    description: "A creative home page design with interactive elements and modern styling approaches.",
-    url: "https://inquisitive-babka-201d43.netlify.app/home",
-  },
-  {
-    id: 7,
-    title: "InfraScan",
-    username: "andizazz",
-    description:
-      "An infrastructure scanning tool that helps monitor and analyze system resources with real-time updates.",
-    url: "https://andizazz.github.io/infrascan/",
-  },
-  {
-    id: 8,
-    title: "Happy Keliling",
-    username: "Raaiyaann",
-    description: "A travel and tour application designed to make exploring new destinations easier and more enjoyable.",
-    url: "https://happykeliling.netlify.app/",
-  },
-  {
-    id: 9,
-    title: "Travel",
-    username: "Farhan1705",
-    description:
-      "A comprehensive travel guide application with destination recommendations and trip planning features.",
-    url: "https://travelbeautifulindonesia.vercel.app/",
-  },
-  {
-    id: 10,
-    title: "Sulteng Hidden Gem",
-    username: "sulteng-explorer",
-    description: "Discover hidden tourist destinations in Central Sulawesi with detailed guides and beautiful imagery.",
-    url: "https://sultenghiddengem.netlify.app/",
-  },
-  {
-    id: 11,
-    title: "Submission Project",
-    username: "dila461",
-    description:
-      "A thoughtfully designed submission project demonstrating strong technical skills and attention to detail.",
-    url: "https://github.com/dila461/submission.git",
-  },
-];

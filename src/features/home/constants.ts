@@ -168,3 +168,97 @@ export const FAQ_DATA: FaqData[] = [
       "Programming Tadulako adalah komunitas non-profit. Semua kegiatan pembelajaran dan mentoring diberikan secara gratis untuk mahasiswa Universitas Tadulako.",
   },
 ];
+
+interface Project {
+  id: number;
+  title: string;
+  username: string;
+  url: string;
+}
+
+export const PROJECTS: Project[] = [
+  {
+    id: 1,
+    title: "Explore",
+    username: "avavsam",
+    url: "https://avavsam.github.io/astro_submission",
+  },
+  {
+    id: 2,
+    title: "Bagus Garden",
+    username: "diL-duL",
+    url: "https://github.com/diL-duL/bagusGarden",
+  },
+  {
+    id: 3,
+    title: "Serayapus",
+    username: "serayapus",
+    url: "https://serayapus.netlify.app",
+  },
+  {
+    id: 4,
+    title: "Avofit",
+    username: "farizzidirli",
+    url: "https://submission-soyuz-farizzidirli.vercel.app",
+  },
+  {
+    id: 5,
+    title: "Kuliner Nusantara",
+    username: "Lieff246",
+    url: "https://lieff246.github.io/Submission-Soyuz",
+  },
+  {
+    id: 6,
+    title: "Disaster Edu",
+    username: "yulii18",
+    url: "https://github.com/yulii18/submission_soyuz.git",
+  },
+  {
+    id: 7,
+    title: "JurnalBatik",
+    username: "Dareaan",
+    url: "https://inquisitive-babka-201d43.netlify.app/home",
+  },
+  {
+    id: 8,
+    title: "InfraScan",
+    username: "andizazz",
+    url: "https://andizazz.github.io/infrascan",
+  },
+  {
+    id: 9,
+    title: "Happy Keliling",
+    username: "Raaiyaann",
+    url: "https://happykeliling.netlify.app",
+  },
+  {
+    id: 10,
+    title: "Travel",
+    username: "Farhan1705",
+    url: "https://travelbeautifulindonesia.vercel.app",
+  },
+  {
+    id: 11,
+    title: "Sulteng Hidden Gem",
+    username: "sulteng-explorer",
+    url: "https://sultenghiddengem.netlify.app",
+  },
+  {
+    id: 12,
+    title: "Spot Cafe",
+    username: "dila461",
+    url: "https://github.com/dila461/submission.git",
+  },
+  {
+    id: 13,
+    title: "BUGIS",
+    username: "Sappo77",
+    url: "https://sappo77.github.io/BUGIS",
+  },
+  {
+    id: 14,
+    title: "KepalKuy",
+    username: "amelsss",
+    url: "https://kepalkuy.netlify.app",
+  },
+];
