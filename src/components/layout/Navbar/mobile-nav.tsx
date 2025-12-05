@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS } from "../../layout/Navbar/constant";
+import { NAV_LINKS } from "./constants";
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);

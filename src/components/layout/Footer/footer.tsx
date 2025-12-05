@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SocialMedia } from "@/components/ui/social-media";
 
-import { FOOTER_DATA } from "./constant";
+import { FOOTER_DATA } from "./constants";
 
 export default function Footer() {
   const { navigate, contact, social } = FOOTER_DATA;

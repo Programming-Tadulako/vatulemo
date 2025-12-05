@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import MobileNav from "./mobile-nav";
 import useScrolling from "@/hooks/useScrolling";
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS } from "./constant";
 import { TextFlip } from "@/components/animations/text-flip";
+import { GithubLogoIcon } from "@phosphor-icons/react/dist/csr/GithubLogo";
+import { NAV_LINKS } from "./constants";
+import MobileNav from "./mobile-nav";
 
 export default function MainNav() {
   const isScrolled = useScrolling();
@@ -29,17 +30,25 @@ export default function MainNav() {
             />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex">
+          <nav className="hidden items-center gap-6 lg:flex">
             {NAV_LINKS.map(({ href, id, title }) => (
               <Link key={id} href={href} className="text-sm font-medium">
                 <TextFlip text={title} />
               </Link>
             ))}
-            <Button size="sm" variant="secondary" asChild>
-              <Link href="https://www.instagram.com/programming.tadulako" target="_blank">
-                Join Us
-              </Link>
-            </Button>
+
+            <div className="flex items-center gap-2">
+              <Button size="sm" variant="secondary" asChild>
+                <Link href="https://www.instagram.com/programming.tadulako" target="_blank">
+                  Join Us
+                </Link>
+              </Button>
+              <Button size="sm" variant="secondary" asChild>
+                <Link href="https://github.com/Programming-Tadulako/vatulemo" target="_blank">
+                  <GithubLogoIcon weight="bold" className="size-5" />
+                </Link>
+              </Button>
+            </div>
           </nav>
           <div className="flex lg:hidden">
             <MobileNav />
