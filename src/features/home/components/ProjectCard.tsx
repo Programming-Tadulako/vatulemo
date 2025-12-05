@@ -23,7 +23,7 @@ export default function ProjectCard({ title, username, description, url, screens
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-muted relative aspect-video overflow-hidden"
+        className="bg-muted relative block aspect-video overflow-hidden"
       >
         <Image
           src={screenshot}
