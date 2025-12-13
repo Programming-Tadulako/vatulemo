@@ -30,24 +30,22 @@ export default function MobileNav() {
               />
             </Link>
           </SheetTitle>
-          <SheetDescription asChild>
-            <nav className="flex flex-col items-center gap-4 pt-2">
-              {NAV_LINKS.map(({ href, id, title }) => (
-                <Link
-                  key={id}
-                  href={href}
-                  className="py-1 text-sm font-medium text-white opacity-90 hover:underline"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {title}
-                </Link>
-              ))}
-              <Button size="sm" variant="secondary" asChild>
-                <Link href="https://www.instagram.com/programming.tadulako" target="_blank">
-                  Join Us
-                </Link>
-              </Button>
-            </nav>
+          <SheetDescription className="flex flex-col items-center gap-4 pt-2">
+            {NAV_LINKS.map(({ href, id, title }) => (
+              <Link
+                key={id}
+                href={href}
+                className="py-1 text-sm font-medium text-white opacity-90 hover:underline"
+                onClick={() => setIsOpen(false)}
+              >
+                {title}
+              </Link>
+            ))}
+            <Button size="sm" variant="secondary" asChild>
+              <Link href="https://www.instagram.com/programming.tadulako" target="_blank">
+                Join Us
+              </Link>
+            </Button>
           </SheetDescription>
         </SheetHeader>
       </SheetContent>

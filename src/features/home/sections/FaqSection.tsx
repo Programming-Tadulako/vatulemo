@@ -12,7 +12,7 @@ export default function BatchSection() {
         </div>
 
         <StaggerContainer useInView staggerChildren={0.1} delayChildren={0.3}>
-          <Accordion type="single" collapsible>
+          <Accordion>
             {FAQ_DATA.map((faq, index) => (
               <StaggerItem key={index}>
                 <AccordionItem value={`item-${index + 1}`}>
