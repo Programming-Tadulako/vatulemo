@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import WrapperLayout from "@/components/layout/WrapperLayout";
 
@@ -22,6 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <Script
+          defer
+          src="https://umami.adzaky.dev/script.js"
+          data-website-id="7f1f6f3a-9027-4904-9901-97a2ca3ac7ab"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${poppins.className} antialiased`}>
         <WrapperLayout>{children}</WrapperLayout>
       </body>
