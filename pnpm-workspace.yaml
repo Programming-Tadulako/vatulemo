@@ -1,7 +1,6 @@
 packages:
   - '.'
 
-settings:
-  allowBuilds:
-    sharp: true
-    unrs-resolver: true
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
