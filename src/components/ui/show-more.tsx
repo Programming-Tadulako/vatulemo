@@ -14,12 +14,18 @@ interface ShowMoreProps<T> {
 
 export function ShowMore<T>({ items, initialCount, renderItem, className = "", scrollToTop = true }: ShowMoreProps<T>) {
   const [showAll, setShowAll] = useState(false);
+  const isFirstRender = useRef(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const hasMore = items.length > initialCount;
 
   const displayedItems = showAll ? items : items.slice(0, initialCount);
 
+
   useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     if (!showAll && scrollToTop && containerRef.current) {
       const containerTop = containerRef.current.getBoundingClientRect().top + window.scrollY;
       const offset = 200;
