@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <Script
           defer
-          src="https://umami.adzaky.dev/script.js"
+          src="https://umami.adzaky.dev/analytics.js"
           data-website-id="7f1f6f3a-9027-4904-9901-97a2ca3ac7ab"
           strategy="afterInteractive"
         />
